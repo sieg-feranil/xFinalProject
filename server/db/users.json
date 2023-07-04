@@ -1,0 +1,44 @@
+{
+  "123": {
+    "email": "123@123.123",
+    "password": "$2b$10$6VHnwQdxrVAQwnjtlJ3Xf.FizROi7EG.DBYBSOF/LTBkiGPgqQoZC",
+    "fav": []
+  },
+  "asdasd": {
+    "email": "asddsad@asddas.it",
+    "password": "asdasd",
+    "fav": []
+  },
+  "vanessa": {
+    "email": "vanessapuzza@spongebon.it",
+    "password": "asdasda",
+    "fav": [
+      "2",
+      "8"
+    ]
+  },
+  "username": {
+    "email": "asdcriri@iasodi.com",
+    "password": "asdasd",
+    "fav": []
+  },
+  "askjdlkjk": {
+    "email": "vanessa@gmail.com",
+    "password": "siegbellissimo",
+    "fav": []
+  },
+  "username10101": {
+    "email": "asdasdasdasd@asdasdad.com",
+    "password": "$2b$09$yDSLjOM3q1FQolV2SOZ9ou9N/IuDNlbqFsVIOae/09GojgGJkHVO6",
+    "fav": []
+  },
+  "asdsadasdww": {
+    "email": "abcdef@abcdef.it",
+    "password": "$2b$10$JuQYZAgzGhokdT0HvmmRC.9L/sxqMp..3ZXCRlXlaRPe2rcSGPYAG",
+    "fav": [
+      "13",
+      "656",
+      "2"
+    ]
+  }
+}

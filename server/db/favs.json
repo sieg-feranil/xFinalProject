@@ -1,0 +1,1107 @@
+[
+  {
+    "data": {
+      "mal_id": 13,
+      "url": "https://myanimelist.net/manga/13/One_Piece",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "One Piece"
+        },
+        {
+          "type": "Japanese",
+          "title": "ONE PIECE"
+        },
+        {
+          "type": "English",
+          "title": "One Piece"
+        }
+      ],
+      "title": "One Piece",
+      "title_english": "One Piece",
+      "title_japanese": "ONE PIECE",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": null,
+      "volumes": null,
+      "status": "Publishing",
+      "publishing": true,
+      "published": {
+        "from": "1997-07-22T00:00:00+00:00",
+        "to": null,
+        "prop": {
+          "from": {
+            "day": 22,
+            "month": 7,
+            "year": 1997
+          },
+          "to": {
+            "day": null,
+            "month": null,
+            "year": null
+          }
+        },
+        "string": "Jul 22, 1997 to ?"
+      },
+      "score": 9.21,
+      "scored": 9.21,
+      "scored_by": 350806,
+      "rank": 4,
+      "popularity": 3,
+      "members": 571944,
+      "favorites": 110343,
+      "synopsis": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins. Twenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas. [Written by MAL Rewrite]",
+      "background": "One Piece is the highest selling manga series of all time, with over 500 million copies in circulation as of 2022. Volume 67 of the series currently holds the record for highest first print run of any manga (including books) of all time in Japan, with 4.05 million in 2012. The series was a finalist for the Tezuka Osamu Cultural Prize three times in a row from 2000 to 2002. In 2012, it won the 41st Japan Cartoonists Association Award Grand Prize, alongside Kimuchi Yokoyama's Neko Darake. VIZ Media has published One Piece in English under the Shonen Jump imprint since January 2, 2003 and in 3-in-1 omnibus editions since December 1, 2009. VIZ Media released three boxed sets for the manga; the first including the first 23 volumes released on November 5, 2013, the second including volumes 24-46 released on November 4, 2014, and the third including volumes 47-70 released on October 4, 2016. The series has also been published in numerous amounts of languages worldwide including; Korean, Malay, Indonesian, Chinese, Thai, Vietnamese, German, French, Italian, Spanish, Portuguese, Swedish, Danish, Norwegian, Finnish, Polish, Turkish, and Russian.",
+      "authors": [
+        {
+          "mal_id": 1881,
+          "type": "people",
+          "name": "Oda, Eiichiro",
+          "url": "https://myanimelist.net/people/1881/Eiichiro_Oda"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 83,
+          "type": "manga",
+          "name": "Shounen Jump (Weekly)",
+          "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 10,
+          "type": "manga",
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [],
+      "demographics": [
+        {
+          "mal_id": 27,
+          "type": "manga",
+          "name": "Shounen",
+          "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 656,
+      "url": "https://myanimelist.net/manga/656/Vagabond",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Vagabond"
+        },
+        {
+          "type": "Japanese",
+          "title": "バガボンド"
+        },
+        {
+          "type": "English",
+          "title": "Vagabond"
+        }
+      ],
+      "title": "Vagabond",
+      "title_english": "Vagabond",
+      "title_japanese": "バガボンド",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": 327,
+      "volumes": 37,
+      "status": "On Hiatus",
+      "publishing": false,
+      "published": {
+        "from": "1998-09-03T00:00:00+00:00",
+        "to": "2015-05-21T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 3,
+            "month": 9,
+            "year": 1998
+          },
+          "to": {
+            "day": 21,
+            "month": 5,
+            "year": 2015
+          }
+        },
+        "string": "Sep 3, 1998 to May 21, 2015"
+      },
+      "score": 9.23,
+      "scored": 9.23,
+      "scored_by": 126912,
+      "rank": 3,
+      "popularity": 15,
+      "members": 343976,
+      "favorites": 37361,
+      "synopsis": "In 16th-century Japan, Shinmen Takezou is a wild, rough young man, in both his appearance and his actions. His aggressive nature has won him the collective reproach and fear of his village, leading him and his best friend, Matahachi Honiden, to run away in search of something grander than provincial life. The pair enlist in the Toyotomi army, yearning for glory—but when the Toyotomi suffer a crushing defeat at the hands of the Tokugawa Clan at the Battle of Sekigahara, the friends barely make it out alive. After the two are separated, Shinmen returns home on a self-appointed mission to notify the Hon'iden family of Matahachi's survival. He instead finds himself a wanted criminal, framed for his friend's supposed murder based on his history of violence. Upon being captured, he is strung up on a tree and left to die. An itinerant monk, the distinguished Takuan Soho, takes pity on the \"devil child,\" secretly freeing Shinmen and christening him with a new name to avoid pursuit by the authorities: Musashi Miyamoto. Vagabond is the fictitious retelling of the life of one of Japan's most renowned swordsmen, the \"Sword Saint\" Musashi Miyamoto—his rise from a swordsman with no desire other than to become \"Invincible Under the Heavens\" to an enlightened warrior who slowly learns of the importance of close friends, self-reflection, and life itself. [Written by MAL Rewrite]",
+      "background": "In 2000, Vagabond won the Japan Media Arts Festival Manga Grand Prize and the 24th Kodansha Manga Award in the general category. The series won the Tezuka Osamu Cultural Prize in 2002 and has had over 82 million copies sold worldwide. Vagabond has been published in English by VIZ Media under the VIZ Signature imprint since April 5, 2002, and in large 3-in-1 omnibuses under the VIZBIG imprint since September 16, 2008. The English release got Takehiko Inoue a nomination for the Eisner Award in the Best Writer/Artist category in 2003. It also has been published in Brazilian Portuguese by Panini Comics/Planet Manga since February 2016.",
+      "authors": [
+        {
+          "mal_id": 1911,
+          "type": "people",
+          "name": "Inoue, Takehiko",
+          "url": "https://myanimelist.net/people/1911/Takehiko_Inoue"
+        },
+        {
+          "mal_id": 5760,
+          "type": "people",
+          "name": "Yoshikawa, Eiji",
+          "url": "https://myanimelist.net/people/5760/Eiji_Yoshikawa"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 72,
+          "type": "manga",
+          "name": "Morning",
+          "url": "https://myanimelist.net/manga/magazine/72/Morning"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 13,
+          "type": "manga",
+          "name": "Historical",
+          "url": "https://myanimelist.net/manga/genre/13/Historical"
+        },
+        {
+          "mal_id": 21,
+          "type": "manga",
+          "name": "Samurai",
+          "url": "https://myanimelist.net/manga/genre/21/Samurai"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 41,
+          "type": "manga",
+          "name": "Seinen",
+          "url": "https://myanimelist.net/manga/genre/41/Seinen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 656,
+      "url": "https://myanimelist.net/manga/656/Vagabond",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Vagabond"
+        },
+        {
+          "type": "Japanese",
+          "title": "バガボンド"
+        },
+        {
+          "type": "English",
+          "title": "Vagabond"
+        }
+      ],
+      "title": "Vagabond",
+      "title_english": "Vagabond",
+      "title_japanese": "バガボンド",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": 327,
+      "volumes": 37,
+      "status": "On Hiatus",
+      "publishing": false,
+      "published": {
+        "from": "1998-09-03T00:00:00+00:00",
+        "to": "2015-05-21T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 3,
+            "month": 9,
+            "year": 1998
+          },
+          "to": {
+            "day": 21,
+            "month": 5,
+            "year": 2015
+          }
+        },
+        "string": "Sep 3, 1998 to May 21, 2015"
+      },
+      "score": 9.23,
+      "scored": 9.23,
+      "scored_by": 126912,
+      "rank": 3,
+      "popularity": 15,
+      "members": 343976,
+      "favorites": 37361,
+      "synopsis": "In 16th-century Japan, Shinmen Takezou is a wild, rough young man, in both his appearance and his actions. His aggressive nature has won him the collective reproach and fear of his village, leading him and his best friend, Matahachi Honiden, to run away in search of something grander than provincial life. The pair enlist in the Toyotomi army, yearning for glory—but when the Toyotomi suffer a crushing defeat at the hands of the Tokugawa Clan at the Battle of Sekigahara, the friends barely make it out alive. After the two are separated, Shinmen returns home on a self-appointed mission to notify the Hon'iden family of Matahachi's survival. He instead finds himself a wanted criminal, framed for his friend's supposed murder based on his history of violence. Upon being captured, he is strung up on a tree and left to die. An itinerant monk, the distinguished Takuan Soho, takes pity on the \"devil child,\" secretly freeing Shinmen and christening him with a new name to avoid pursuit by the authorities: Musashi Miyamoto. Vagabond is the fictitious retelling of the life of one of Japan's most renowned swordsmen, the \"Sword Saint\" Musashi Miyamoto—his rise from a swordsman with no desire other than to become \"Invincible Under the Heavens\" to an enlightened warrior who slowly learns of the importance of close friends, self-reflection, and life itself. [Written by MAL Rewrite]",
+      "background": "In 2000, Vagabond won the Japan Media Arts Festival Manga Grand Prize and the 24th Kodansha Manga Award in the general category. The series won the Tezuka Osamu Cultural Prize in 2002 and has had over 82 million copies sold worldwide. Vagabond has been published in English by VIZ Media under the VIZ Signature imprint since April 5, 2002, and in large 3-in-1 omnibuses under the VIZBIG imprint since September 16, 2008. The English release got Takehiko Inoue a nomination for the Eisner Award in the Best Writer/Artist category in 2003. It also has been published in Brazilian Portuguese by Panini Comics/Planet Manga since February 2016.",
+      "authors": [
+        {
+          "mal_id": 1911,
+          "type": "people",
+          "name": "Inoue, Takehiko",
+          "url": "https://myanimelist.net/people/1911/Takehiko_Inoue"
+        },
+        {
+          "mal_id": 5760,
+          "type": "people",
+          "name": "Yoshikawa, Eiji",
+          "url": "https://myanimelist.net/people/5760/Eiji_Yoshikawa"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 72,
+          "type": "manga",
+          "name": "Morning",
+          "url": "https://myanimelist.net/manga/magazine/72/Morning"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 13,
+          "type": "manga",
+          "name": "Historical",
+          "url": "https://myanimelist.net/manga/genre/13/Historical"
+        },
+        {
+          "mal_id": 21,
+          "type": "manga",
+          "name": "Samurai",
+          "url": "https://myanimelist.net/manga/genre/21/Samurai"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 41,
+          "type": "manga",
+          "name": "Seinen",
+          "url": "https://myanimelist.net/manga/genre/41/Seinen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 656,
+      "url": "https://myanimelist.net/manga/656/Vagabond",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/259070.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/259070t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/259070l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Vagabond"
+        },
+        {
+          "type": "Japanese",
+          "title": "バガボンド"
+        },
+        {
+          "type": "English",
+          "title": "Vagabond"
+        }
+      ],
+      "title": "Vagabond",
+      "title_english": "Vagabond",
+      "title_japanese": "バガボンド",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": 327,
+      "volumes": 37,
+      "status": "On Hiatus",
+      "publishing": false,
+      "published": {
+        "from": "1998-09-03T00:00:00+00:00",
+        "to": "2015-05-21T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 3,
+            "month": 9,
+            "year": 1998
+          },
+          "to": {
+            "day": 21,
+            "month": 5,
+            "year": 2015
+          }
+        },
+        "string": "Sep 3, 1998 to May 21, 2015"
+      },
+      "score": 9.23,
+      "scored": 9.23,
+      "scored_by": 126912,
+      "rank": 3,
+      "popularity": 15,
+      "members": 343976,
+      "favorites": 37361,
+      "synopsis": "In 16th-century Japan, Shinmen Takezou is a wild, rough young man, in both his appearance and his actions. His aggressive nature has won him the collective reproach and fear of his village, leading him and his best friend, Matahachi Honiden, to run away in search of something grander than provincial life. The pair enlist in the Toyotomi army, yearning for glory—but when the Toyotomi suffer a crushing defeat at the hands of the Tokugawa Clan at the Battle of Sekigahara, the friends barely make it out alive. After the two are separated, Shinmen returns home on a self-appointed mission to notify the Hon'iden family of Matahachi's survival. He instead finds himself a wanted criminal, framed for his friend's supposed murder based on his history of violence. Upon being captured, he is strung up on a tree and left to die. An itinerant monk, the distinguished Takuan Soho, takes pity on the \"devil child,\" secretly freeing Shinmen and christening him with a new name to avoid pursuit by the authorities: Musashi Miyamoto. Vagabond is the fictitious retelling of the life of one of Japan's most renowned swordsmen, the \"Sword Saint\" Musashi Miyamoto—his rise from a swordsman with no desire other than to become \"Invincible Under the Heavens\" to an enlightened warrior who slowly learns of the importance of close friends, self-reflection, and life itself. [Written by MAL Rewrite]",
+      "background": "In 2000, Vagabond won the Japan Media Arts Festival Manga Grand Prize and the 24th Kodansha Manga Award in the general category. The series won the Tezuka Osamu Cultural Prize in 2002 and has had over 82 million copies sold worldwide. Vagabond has been published in English by VIZ Media under the VIZ Signature imprint since April 5, 2002, and in large 3-in-1 omnibuses under the VIZBIG imprint since September 16, 2008. The English release got Takehiko Inoue a nomination for the Eisner Award in the Best Writer/Artist category in 2003. It also has been published in Brazilian Portuguese by Panini Comics/Planet Manga since February 2016.",
+      "authors": [
+        {
+          "mal_id": 1911,
+          "type": "people",
+          "name": "Inoue, Takehiko",
+          "url": "https://myanimelist.net/people/1911/Takehiko_Inoue"
+        },
+        {
+          "mal_id": 5760,
+          "type": "people",
+          "name": "Yoshikawa, Eiji",
+          "url": "https://myanimelist.net/people/5760/Eiji_Yoshikawa"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 72,
+          "type": "manga",
+          "name": "Morning",
+          "url": "https://myanimelist.net/manga/magazine/72/Morning"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 13,
+          "type": "manga",
+          "name": "Historical",
+          "url": "https://myanimelist.net/manga/genre/13/Historical"
+        },
+        {
+          "mal_id": 21,
+          "type": "manga",
+          "name": "Samurai",
+          "url": "https://myanimelist.net/manga/genre/21/Samurai"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 41,
+          "type": "manga",
+          "name": "Seinen",
+          "url": "https://myanimelist.net/manga/genre/41/Seinen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 51,
+      "url": "https://myanimelist.net/manga/51/Slam_Dunk",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/258749.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/258749t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/258749l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/258749.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/258749t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/258749l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Slam Dunk"
+        },
+        {
+          "type": "Japanese",
+          "title": "SLAM DUNK"
+        },
+        {
+          "type": "English",
+          "title": "Slam Dunk"
+        }
+      ],
+      "title": "Slam Dunk",
+      "title_english": "Slam Dunk",
+      "title_japanese": "SLAM DUNK",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": 276,
+      "volumes": 31,
+      "status": "Finished",
+      "publishing": false,
+      "published": {
+        "from": "1990-09-18T00:00:00+00:00",
+        "to": "1996-06-04T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 18,
+            "month": 9,
+            "year": 1990
+          },
+          "to": {
+            "day": 4,
+            "month": 6,
+            "year": 1996
+          }
+        },
+        "string": "Sep 18, 1990 to Jun 4, 1996"
+      },
+      "score": 9.08,
+      "scored": 9.08,
+      "scored_by": 69656,
+      "rank": 6,
+      "popularity": 57,
+      "members": 155489,
+      "favorites": 14704,
+      "synopsis": "Hanamichi Sakuragi, a tall, boisterous teenager with flame-red hair and physical strength beyond his years, is eager to put an end to his rejection streak of 50 and finally score a girlfriend as he begins his first year of Shohoku High. However, his reputation for delinquency and destructiveness precedes him, and most of his fellow students subsequently avoid him like the plague. As his first day of school ends, he is left with two strong thoughts: \"I hate basketball\" and \"I need a girlfriend.\" Haruko Akagi, ignorant of Hanamichi's history of misbehavior, notices his immense height and unwittingly approaches him, asking whether or not he likes basketball. Overcome by the fact that a girl is speaking to him, the red-haired giant blurts out a yes despite his true feelings. At the gym, Haruko asks if he can do a slam dunk. Though a complete novice, Hanamachi palms the ball and makes the leap...but overshoots, slamming his head into the backboard. Amazed by his near-inhuman physical abilities, Haruko quickly notifies the school's basketball captain of his feat. With this, Hanamichi is unexpectedly thrust into a world of competition for a girl he barely knows, but he soon discovers that there is perhaps more to basketball than he once thought. [Written by MAL Rewrite]",
+      "background": "Slam Dunk was awarded the 40th Shogakukan Manga Award for best shounen manga in 1994. In a 2006 poll for the 10th Japan Media Arts Festival, the series was voted by Japanese fans as the #1 manga series of all time. With over 120 million copies sold as of 2012, it is one of the most successful manga series to date. Its wide success led to a large increase in the popularity of basketball in Japanese youth. In 2010, Takehiko Inoue received special commendations from the Japan Basketball Association for popularizing basketball in Japan. The series was published in English by Gutsoon! Entertainment under the Raijin Comics Imprint for five volumes from July 2, 2003 to May 5, 2004. After Gutsoon's shutdown, publishing rights to Slam Dunk were purchased by VIZ Media who then republished the series under the Shonen Jump imprint from September 2, 2008 to December 3, 2013. It was published in Spanish by Ivrea España from February 2003 to September 2005 and republished in Kanzenban from January 2010 to May 2016.",
+      "authors": [
+        {
+          "mal_id": 1911,
+          "type": "people",
+          "name": "Inoue, Takehiko",
+          "url": "https://myanimelist.net/people/1911/Takehiko_Inoue"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 83,
+          "type": "manga",
+          "name": "Shounen Jump (Weekly)",
+          "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        },
+        {
+          "mal_id": 30,
+          "type": "manga",
+          "name": "Sports",
+          "url": "https://myanimelist.net/manga/genre/30/Sports"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 23,
+          "type": "manga",
+          "name": "School",
+          "url": "https://myanimelist.net/manga/genre/23/School"
+        },
+        {
+          "mal_id": 78,
+          "type": "manga",
+          "name": "Team Sports",
+          "url": "https://myanimelist.net/manga/genre/78/Team_Sports"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 27,
+          "type": "manga",
+          "name": "Shounen",
+          "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 51,
+      "url": "https://myanimelist.net/manga/51/Slam_Dunk",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/258749.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/258749t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/258749l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/258749.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/258749t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/258749l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Slam Dunk"
+        },
+        {
+          "type": "Japanese",
+          "title": "SLAM DUNK"
+        },
+        {
+          "type": "English",
+          "title": "Slam Dunk"
+        }
+      ],
+      "title": "Slam Dunk",
+      "title_english": "Slam Dunk",
+      "title_japanese": "SLAM DUNK",
+      "title_synonyms": [],
+      "type": "Manga",
+      "chapters": 276,
+      "volumes": 31,
+      "status": "Finished",
+      "publishing": false,
+      "published": {
+        "from": "1990-09-18T00:00:00+00:00",
+        "to": "1996-06-04T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 18,
+            "month": 9,
+            "year": 1990
+          },
+          "to": {
+            "day": 4,
+            "month": 6,
+            "year": 1996
+          }
+        },
+        "string": "Sep 18, 1990 to Jun 4, 1996"
+      },
+      "score": 9.08,
+      "scored": 9.08,
+      "scored_by": 69656,
+      "rank": 6,
+      "popularity": 57,
+      "members": 155489,
+      "favorites": 14704,
+      "synopsis": "Hanamichi Sakuragi, a tall, boisterous teenager with flame-red hair and physical strength beyond his years, is eager to put an end to his rejection streak of 50 and finally score a girlfriend as he begins his first year of Shohoku High. However, his reputation for delinquency and destructiveness precedes him, and most of his fellow students subsequently avoid him like the plague. As his first day of school ends, he is left with two strong thoughts: \"I hate basketball\" and \"I need a girlfriend.\" Haruko Akagi, ignorant of Hanamichi's history of misbehavior, notices his immense height and unwittingly approaches him, asking whether or not he likes basketball. Overcome by the fact that a girl is speaking to him, the red-haired giant blurts out a yes despite his true feelings. At the gym, Haruko asks if he can do a slam dunk. Though a complete novice, Hanamachi palms the ball and makes the leap...but overshoots, slamming his head into the backboard. Amazed by his near-inhuman physical abilities, Haruko quickly notifies the school's basketball captain of his feat. With this, Hanamichi is unexpectedly thrust into a world of competition for a girl he barely knows, but he soon discovers that there is perhaps more to basketball than he once thought. [Written by MAL Rewrite]",
+      "background": "Slam Dunk was awarded the 40th Shogakukan Manga Award for best shounen manga in 1994. In a 2006 poll for the 10th Japan Media Arts Festival, the series was voted by Japanese fans as the #1 manga series of all time. With over 120 million copies sold as of 2012, it is one of the most successful manga series to date. Its wide success led to a large increase in the popularity of basketball in Japanese youth. In 2010, Takehiko Inoue received special commendations from the Japan Basketball Association for popularizing basketball in Japan. The series was published in English by Gutsoon! Entertainment under the Raijin Comics Imprint for five volumes from July 2, 2003 to May 5, 2004. After Gutsoon's shutdown, publishing rights to Slam Dunk were purchased by VIZ Media who then republished the series under the Shonen Jump imprint from September 2, 2008 to December 3, 2013. It was published in Spanish by Ivrea España from February 2003 to September 2005 and republished in Kanzenban from January 2010 to May 2016.",
+      "authors": [
+        {
+          "mal_id": 1911,
+          "type": "people",
+          "name": "Inoue, Takehiko",
+          "url": "https://myanimelist.net/people/1911/Takehiko_Inoue"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 83,
+          "type": "manga",
+          "name": "Shounen Jump (Weekly)",
+          "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        },
+        {
+          "mal_id": 30,
+          "type": "manga",
+          "name": "Sports",
+          "url": "https://myanimelist.net/manga/genre/30/Sports"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 23,
+          "type": "manga",
+          "name": "School",
+          "url": "https://myanimelist.net/manga/genre/23/School"
+        },
+        {
+          "mal_id": 78,
+          "type": "manga",
+          "name": "Team Sports",
+          "url": "https://myanimelist.net/manga/genre/78/Team_Sports"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 27,
+          "type": "manga",
+          "name": "Shounen",
+          "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 2,
+      "url": "https://myanimelist.net/manga/2/Berserk",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/157897t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/157897l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/157897.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/157897t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/157897l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Berserk"
+        },
+        {
+          "type": "Synonym",
+          "title": "Berserk: The Prototype"
+        },
+        {
+          "type": "Japanese",
+          "title": "ベルセルク"
+        },
+        {
+          "type": "English",
+          "title": "Berserk"
+        }
+      ],
+      "title": "Berserk",
+      "title_english": "Berserk",
+      "title_japanese": "ベルセルク",
+      "title_synonyms": [
+        "Berserk: The Prototype"
+      ],
+      "type": "Manga",
+      "chapters": null,
+      "volumes": null,
+      "status": "Publishing",
+      "publishing": true,
+      "published": {
+        "from": "1989-08-25T00:00:00+00:00",
+        "to": null,
+        "prop": {
+          "from": {
+            "day": 25,
+            "month": 8,
+            "year": 1989
+          },
+          "to": {
+            "day": null,
+            "month": null,
+            "year": null
+          }
+        },
+        "string": "Aug 25, 1989 to ?"
+      },
+      "score": 9.47,
+      "scored": 9.47,
+      "scored_by": 315219,
+      "rank": 1,
+      "popularity": 1,
+      "members": 635718,
+      "favorites": 118172,
+      "synopsis": "Guts, a former mercenary now known as the \"Black Swordsman,\" is out for revenge. After a tumultuous childhood, he finally finds someone he respects and believes he can trust, only to have everything fall apart when this person takes away everything important to Guts for the purpose of fulfilling his own desires. Now marked for death, Guts becomes condemned to a fate in which he is relentlessly pursued by demonic beings. Setting out on a dreadful quest riddled with misfortune, Guts, armed with a massive sword and monstrous strength, will let nothing stop him, not even death itself, until he is finally able to take the head of the one who stripped him—and his loved one—of their humanity. [Written by MAL Rewrite] Included one-shot: Volume 14: Berserk: The Prototype",
+      "background": "Berserk won the Award for Excellence at the sixth installment of Tezuka Osamu Cultural Prize in 2002. The series has over 50 million copies in print worldwide and has been published in English by Dark Horse since November 4, 2003. It is also published in Italy, Germany, Spain, France, Brazil, South Korea, Hong Kong, Taiwan, Thailand, Poland, México and Turkey. In May 2021, the author Kentaro Miura suddenly died at the age of 54. Chapter 364 of Berserk was published posthumously on September 10, 2021. Miura would often share details about the series' story with his childhood friend and fellow mangaka Kouji Mori. Berserk resumed on June 24, 2022, with Studio Gaga handling the art and Kouji Mori's supervision.",
+      "authors": [
+        {
+          "mal_id": 1868,
+          "type": "people",
+          "name": "Miura, Kentarou",
+          "url": "https://myanimelist.net/people/1868/Kentarou_Miura"
+        },
+        {
+          "mal_id": 49592,
+          "type": "people",
+          "name": "Studio Gaga",
+          "url": "https://myanimelist.net/people/49592/Studio_Gaga"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Young Animal",
+          "url": "https://myanimelist.net/manga/magazine/2/Young_Animal"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        },
+        {
+          "mal_id": 8,
+          "type": "manga",
+          "name": "Drama",
+          "url": "https://myanimelist.net/manga/genre/8/Drama"
+        },
+        {
+          "mal_id": 10,
+          "type": "manga",
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+        },
+        {
+          "mal_id": 14,
+          "type": "manga",
+          "name": "Horror",
+          "url": "https://myanimelist.net/manga/genre/14/Horror"
+        },
+        {
+          "mal_id": 37,
+          "type": "manga",
+          "name": "Supernatural",
+          "url": "https://myanimelist.net/manga/genre/37/Supernatural"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 58,
+          "type": "manga",
+          "name": "Gore",
+          "url": "https://myanimelist.net/manga/genre/58/Gore"
+        },
+        {
+          "mal_id": 38,
+          "type": "manga",
+          "name": "Military",
+          "url": "https://myanimelist.net/manga/genre/38/Military"
+        },
+        {
+          "mal_id": 6,
+          "type": "manga",
+          "name": "Mythology",
+          "url": "https://myanimelist.net/manga/genre/6/Mythology"
+        },
+        {
+          "mal_id": 40,
+          "type": "manga",
+          "name": "Psychological",
+          "url": "https://myanimelist.net/manga/genre/40/Psychological"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 41,
+          "type": "manga",
+          "name": "Seinen",
+          "url": "https://myanimelist.net/manga/genre/41/Seinen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 2,
+      "url": "https://myanimelist.net/manga/2/Berserk",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/157897t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/157897l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/1/157897.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/1/157897t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/1/157897l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Berserk"
+        },
+        {
+          "type": "Synonym",
+          "title": "Berserk: The Prototype"
+        },
+        {
+          "type": "Japanese",
+          "title": "ベルセルク"
+        },
+        {
+          "type": "English",
+          "title": "Berserk"
+        }
+      ],
+      "title": "Berserk",
+      "title_english": "Berserk",
+      "title_japanese": "ベルセルク",
+      "title_synonyms": [
+        "Berserk: The Prototype"
+      ],
+      "type": "Manga",
+      "chapters": null,
+      "volumes": null,
+      "status": "Publishing",
+      "publishing": true,
+      "published": {
+        "from": "1989-08-25T00:00:00+00:00",
+        "to": null,
+        "prop": {
+          "from": {
+            "day": 25,
+            "month": 8,
+            "year": 1989
+          },
+          "to": {
+            "day": null,
+            "month": null,
+            "year": null
+          }
+        },
+        "string": "Aug 25, 1989 to ?"
+      },
+      "score": 9.47,
+      "scored": 9.47,
+      "scored_by": 315219,
+      "rank": 1,
+      "popularity": 1,
+      "members": 635718,
+      "favorites": 118172,
+      "synopsis": "Guts, a former mercenary now known as the \"Black Swordsman,\" is out for revenge. After a tumultuous childhood, he finally finds someone he respects and believes he can trust, only to have everything fall apart when this person takes away everything important to Guts for the purpose of fulfilling his own desires. Now marked for death, Guts becomes condemned to a fate in which he is relentlessly pursued by demonic beings. Setting out on a dreadful quest riddled with misfortune, Guts, armed with a massive sword and monstrous strength, will let nothing stop him, not even death itself, until he is finally able to take the head of the one who stripped him—and his loved one—of their humanity. [Written by MAL Rewrite] Included one-shot: Volume 14: Berserk: The Prototype",
+      "background": "Berserk won the Award for Excellence at the sixth installment of Tezuka Osamu Cultural Prize in 2002. The series has over 50 million copies in print worldwide and has been published in English by Dark Horse since November 4, 2003. It is also published in Italy, Germany, Spain, France, Brazil, South Korea, Hong Kong, Taiwan, Thailand, Poland, México and Turkey. In May 2021, the author Kentaro Miura suddenly died at the age of 54. Chapter 364 of Berserk was published posthumously on September 10, 2021. Miura would often share details about the series' story with his childhood friend and fellow mangaka Kouji Mori. Berserk resumed on June 24, 2022, with Studio Gaga handling the art and Kouji Mori's supervision.",
+      "authors": [
+        {
+          "mal_id": 1868,
+          "type": "people",
+          "name": "Miura, Kentarou",
+          "url": "https://myanimelist.net/people/1868/Kentarou_Miura"
+        },
+        {
+          "mal_id": 49592,
+          "type": "people",
+          "name": "Studio Gaga",
+          "url": "https://myanimelist.net/people/49592/Studio_Gaga"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Young Animal",
+          "url": "https://myanimelist.net/manga/magazine/2/Young_Animal"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 46,
+          "type": "manga",
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/manga/genre/46/Award_Winning"
+        },
+        {
+          "mal_id": 8,
+          "type": "manga",
+          "name": "Drama",
+          "url": "https://myanimelist.net/manga/genre/8/Drama"
+        },
+        {
+          "mal_id": 10,
+          "type": "manga",
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+        },
+        {
+          "mal_id": 14,
+          "type": "manga",
+          "name": "Horror",
+          "url": "https://myanimelist.net/manga/genre/14/Horror"
+        },
+        {
+          "mal_id": 37,
+          "type": "manga",
+          "name": "Supernatural",
+          "url": "https://myanimelist.net/manga/genre/37/Supernatural"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 58,
+          "type": "manga",
+          "name": "Gore",
+          "url": "https://myanimelist.net/manga/genre/58/Gore"
+        },
+        {
+          "mal_id": 38,
+          "type": "manga",
+          "name": "Military",
+          "url": "https://myanimelist.net/manga/genre/38/Military"
+        },
+        {
+          "mal_id": 6,
+          "type": "manga",
+          "name": "Mythology",
+          "url": "https://myanimelist.net/manga/genre/6/Mythology"
+        },
+        {
+          "mal_id": 40,
+          "type": "manga",
+          "name": "Psychological",
+          "url": "https://myanimelist.net/manga/genre/40/Psychological"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 41,
+          "type": "manga",
+          "name": "Seinen",
+          "url": "https://myanimelist.net/manga/genre/41/Seinen"
+        }
+      ]
+    }
+  }
+]

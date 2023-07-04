@@ -1,0 +1,304 @@
+import manga from "../db/mangalist.json" assert { type: "json"}
+import users from "../db/users.json" assert {type: "json"}
+import genres from "../db/genres.json" assert {type: "json"}
+import favs from "../db/favs.json" assert {type: "json"}
+import axios from 'axios'
+import fs from 'fs/promises'
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
+import 'dotenv/config'
+const DB_PATH_MANGA = './db/mangalist.json'
+const DB_PATH_USERS = './db/users.json'
+const DB_PATH_FAVS = './db/favs.json'
+
+
+const MAX_RETRY_ATTEMPTS = 3; // Numero massimo di tentativi di ritentativo
+const RETRY_DELAY = 1000; // Ritardo tra i tentativi di ritentativo (in millisecondi)
+
+export const welcome = async (req, res) => {
+
+  res.send('manga site')
+  
+}
+
+// export const getShow = async (req, res) => {
+//   res.send(manga)
+// }
+
+// export const getManga = async (req, res) => {
+//   res.send(manga[req.params.title])
+// }
+
+
+//per il db in caso non funge l'api
+// export const fillDb = async (req, res) => {
+//   const res1 = await axios.get(`https://api.jikan.moe/v4/top/manga?page=${req.body.page}&&limit=25`);
+//   const data = res1.data.data;
+//   let newManga = {}
+//   let updatedManga = {}
+//   for (const el of data) {
+//     newManga[el.title] = {
+//       "id": el.mal_id,
+//       "authors": el.authors,
+//       "score": el.score,
+//       "rank": el.rank,
+//       "images": el.images,
+//       "genres": el.genres,
+//       "synopsis": el.synopsis
+//     };
+
+//     updatedManga = {
+//       ...manga,
+//       ...newManga
+//     };
+//     await fs.writeFile(DB_PATH_MANGA, JSON.stringify(updatedManga, null, '  '));
+//   }
+
+//   res.status(201).send({
+//     message: `${data} manga created`
+//   }).end();
+// };
+
+
+
+export const getGenres = async (req, res) => {
+  try {
+
+    res.send(genres)
+
+  }
+  catch (error) {
+
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+
+  }
+}
+
+
+
+export const register = async (req, res) => {
+  try {
+
+    let entries = Object.entries(req.body);
+    let username = entries[0][0];
+    let { email, password } = entries[0][1];
+    console.log(username);
+
+    const existingUserByUsername = Object.keys(users).find(
+      (user) => user == username
+    );
+
+    if (existingUserByUsername) return res.status(400).send('Username already exists');
+      
+
+    // Controllo se esiste già un utente con la stessa email
+    const existingUserByEmail = Object.values(users).find(
+      (user) => user.email == email
+    );
+
+    if (existingUserByEmail) return res.status(400).send('Email already exists');
+      
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const updatedUsers = {
+      ...users,
+      ...{
+        [username]: {
+          email: email,
+          password: hashedPassword,
+          fav: [],
+        },
+      },
+    };
+    
+    console.log(updatedUsers);
+    await fs.writeFile(DB_PATH_USERS, JSON.stringify(updatedUsers, null, '  '));
+    res.send('ok').end();
+
+  } catch (error) {
+
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+
+  }
+};
+
+
+export const login = async (req, res) => {
+  try {
+
+    const username = Object.keys(users).find(
+      (key) => users[key].email === req.body.email
+
+    );
+    console.log(username);
+    if (username) {
+
+      const isPasswordValid = await bcrypt.compare(
+        req.body.password,
+        users[username].password
+
+      );
+      if (isPasswordValid) {
+
+        const accessToken = jwt.sign(
+          users[username],
+          process.env.ACCESS_TOKEN_SECRET,
+          { expiresIn: '1800s' }
+        );
+        res.json({
+          accessToken: accessToken,
+          username: username,
+        });
+        // console.log(accessToken);
+        return res.status(200);
+      } else {
+
+        console.log('Invalid password');
+        return res.status(400).send('invalid email or password ');
+
+      }
+    } else {
+
+      console.log('User not found');
+      return res.status(400).send('invalid password or email');
+
+    }
+  } catch (error) {
+
+    console.error(error);
+    res.status(404).send('invalid password or email');
+
+  }
+};
+
+
+export const addFav = async (req, res) => {
+  try {
+    const { id, username } = req.headers;
+    if (!users[username].fav.includes(id)) {
+
+      users[username].fav.push(id);
+      await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+
+    }
+
+    let retryAttempts = 0;
+    let response;
+
+    while (retryAttempts < MAX_RETRY_ATTEMPTS) {
+
+      try {
+
+        response = await axios.get(`https://api.jikan.moe/v4/manga/${id}`);
+        break; // Esci dal loop se la richiesta ha avuto successo
+
+      } catch (error) {
+        if (error.response && error.response.status === 429) {
+
+          console.log(`Rate limit exceeded. Retrying in ${RETRY_DELAY}ms...`);
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+
+          retryAttempts++;
+        } else {
+          throw error;
+        }
+      }
+    }
+
+    if (response && !favs.includes(response.data)) {
+      favs.push(response.data);
+      await fs.writeFile(DB_PATH_FAVS, JSON.stringify(favs, null, '  '));
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'Favorite added successfully',
+      guarda: users[username].fav,
+
+    });
+
+  } catch (error) {
+
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'An error occurred',
+    });
+
+  }
+};
+
+export const getFav = async (req, res) => {
+  try {
+
+    const { username } = req.headers;
+    console.log(users[username].fav);
+    res.send(users[username].fav);
+
+  } catch (error) {
+
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+};
+
+export const deleteFav = async (req, res) => {
+  try {
+    const { id, username } = req.headers;
+    if (!users[username]) return res.status(404).send('User not found');
+      
+    users[username].fav = users[username].fav.filter((favId) => favId !== id);
+    await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+
+    let updatedFavs = favs.filter((mangaObj) => mangaObj.data.mal_id.toString() !== id.toString());
+    console.log(updatedFavs);
+    await fs.writeFile(DB_PATH_FAVS, JSON.stringify(updatedFavs, null, '  '));
+
+    console.log(users[username].fav);
+    res.send(users[username].fav);
+
+  } catch (error) {
+
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+
+  }
+};
+
+
+export const getMangaRecommendations = async (req, res) => {
+  try {
+
+    let retryAttempts = 0;
+
+    let response;
+    while (retryAttempts < MAX_RETRY_ATTEMPTS) {
+
+      try {
+
+        response = await axios.get(`https://api.jikan.moe/v4/manga/${req.params.mal_id}/recommendations`);
+        break; // Esci dal loop se la richiesta ha avuto successo
+
+      } catch (error) {
+
+        if (error.response && error.response.status === 429) {
+
+          console.log(`Rate limit exceeded. Retrying in ${RETRY_DELAY}ms...`);
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+          retryAttempts++;
+
+        } else {
+          throw error;
+        }
+      }
+    }
+
+    res.send(response.data.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+};
