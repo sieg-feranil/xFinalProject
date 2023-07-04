@@ -15,19 +15,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.get('/', manga.welcome)
-// in caso il server sia down
-// app.get('/manga', manga.getShow)
-// app.post('/manga', manga.fillDb)
-// app.get('/manga/:title', manga.getManga)
 
 
 app.get('/manga/:mal_id/recommendations', manga.getMangaRecommendations)
 app.post('/registration', manga.register)
 app.post('/login', manga.login)
 app.get('/genres', manga.getGenres)
-app.put('/favourites', manga.addFav)
+app.put('/favourites', authenticateToken, manga.addFav)
 app.get('/favourites', authenticateToken, manga.getFav)
-app.delete('/favourites', manga.deleteFav)
+app.delete('/favourites', authenticateToken, manga.deleteFav)
 
 
 

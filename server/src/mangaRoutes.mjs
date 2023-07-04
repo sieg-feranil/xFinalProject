@@ -18,47 +18,8 @@ const RETRY_DELAY = 1000; // Ritardo tra i tentativi di ritentativo (in millisec
 export const welcome = async (req, res) => {
 
   res.send('manga site')
-  
+
 }
-
-// export const getShow = async (req, res) => {
-//   res.send(manga)
-// }
-
-// export const getManga = async (req, res) => {
-//   res.send(manga[req.params.title])
-// }
-
-
-//per il db in caso non funge l'api
-// export const fillDb = async (req, res) => {
-//   const res1 = await axios.get(`https://api.jikan.moe/v4/top/manga?page=${req.body.page}&&limit=25`);
-//   const data = res1.data.data;
-//   let newManga = {}
-//   let updatedManga = {}
-//   for (const el of data) {
-//     newManga[el.title] = {
-//       "id": el.mal_id,
-//       "authors": el.authors,
-//       "score": el.score,
-//       "rank": el.rank,
-//       "images": el.images,
-//       "genres": el.genres,
-//       "synopsis": el.synopsis
-//     };
-
-//     updatedManga = {
-//       ...manga,
-//       ...newManga
-//     };
-//     await fs.writeFile(DB_PATH_MANGA, JSON.stringify(updatedManga, null, '  '));
-//   }
-
-//   res.status(201).send({
-//     message: `${data} manga created`
-//   }).end();
-// };
-
 
 
 export const getGenres = async (req, res) => {
@@ -177,7 +138,8 @@ export const login = async (req, res) => {
 
 export const addFav = async (req, res) => {
   try {
-    const { id, username } = req.headers;
+    const { id, username } = req.body;
+    console.log(req.body);
     if (!users[username].fav.includes(id)) {
 
       users[username].fav.push(id);
@@ -235,7 +197,6 @@ export const getFav = async (req, res) => {
   try {
 
     const { username } = req.headers;
-    console.log(users[username].fav);
     res.send(users[username].fav);
 
   } catch (error) {

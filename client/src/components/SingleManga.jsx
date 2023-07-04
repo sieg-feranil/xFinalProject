@@ -12,7 +12,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
   const username = sessionStorage.getItem('username');
   const accessToken = sessionStorage.getItem('jwtToken')
 
-  
+
   async function fetchData() {
     try {
       const response = await axios.get(`https://api.jikan.moe/v4/manga/${encodeURIComponent(mal_id)}`);
@@ -28,12 +28,19 @@ const SingleManga1 = ({ isLoggedIn }) => {
 
     try {
       const res = await axios.put('http://localhost:3000/favourites', {
-        headers: {
-          id: mal_id,
-          username: username,
-          Authorization: `Bearer ${accessToken}`,
+
+        id: mal_id,
+        username: username,
+
+      },
+        {
+          headers: {
+           
+            Authorization: `Bearer ${accessToken}`,
+
+          }
         }
-      });
+      );
       console.log('Richiesta PUT eseguita con successo', res);
       setIsFav(true);
     } catch (error) {
