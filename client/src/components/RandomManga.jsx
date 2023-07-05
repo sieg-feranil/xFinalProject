@@ -18,7 +18,15 @@ const RandomManga = ({ isLoggedIn }) => {
         setRandomManga(data);
         console.log(randomManga.data);
       } catch (error) {
-        console.log(error);
+        if (error.response && error.response.status === 429) {
+
+          await delay(400);
+          await fetchData();
+  
+        } else {
+  
+          console.log(error);
+        }
       }
     }
   

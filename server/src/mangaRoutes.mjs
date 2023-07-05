@@ -94,7 +94,7 @@ export const login = async (req, res) => {
       (key) => users[key].email === req.body.email
 
     );
-    console.log(username);
+
     if (username) {
 
       const isPasswordValid = await bcrypt.compare(
@@ -107,7 +107,7 @@ export const login = async (req, res) => {
         const accessToken = jwt.sign(
           users[username],
           process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: '1800s' }
+          { expiresIn: '1h' }
         );
         res.json({
           accessToken: accessToken,

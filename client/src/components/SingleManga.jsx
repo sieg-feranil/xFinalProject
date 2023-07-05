@@ -12,6 +12,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
   const username = sessionStorage.getItem('username');
   const accessToken = sessionStorage.getItem('jwtToken')
 
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   async function fetchData() {
     try {
@@ -20,10 +21,17 @@ const SingleManga1 = ({ isLoggedIn }) => {
       setSingleMangaData(data);
       console.log(singleMangaData.data);
     } catch (error) {
-      console.log(error);
+      if (error.response && error.response.status === 429) {
+
+        await delay(400);
+        await fetchData();
+
+      } else {
+
+        console.log(error);
+      }
     }
   }
-
   async function handlePutReq() {
 
     try {
@@ -35,7 +43,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
       },
         {
           headers: {
-           
+
             Authorization: `Bearer ${accessToken}`,
 
           }

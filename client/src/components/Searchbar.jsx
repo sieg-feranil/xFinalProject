@@ -31,7 +31,15 @@ function SearchBar() {
             setResults(mangaData);
             setDropdownVisible(true);
         } catch (error) {
-            console.error(error);
+            if (error.response && error.response.status === 429) {
+
+                await delay(400);
+                await fetchData();
+        
+              } else {
+        
+                console.log(error);
+              }
         }
     };
 
