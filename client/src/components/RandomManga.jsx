@@ -10,6 +10,7 @@ const RandomManga = ({ isLoggedIn }) => {
     const [randomManga, setRandomManga] = useState({})
     const [refresh, setRefresh] = useState(true)
   
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   
     async function fetchData() {
       try {

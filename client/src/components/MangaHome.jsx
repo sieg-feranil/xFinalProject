@@ -10,6 +10,7 @@ const Home1 = () => {
   const [categPage, setCategPage] = useState(1);
 
   let URL = `https://api.jikan.moe/v4/top/manga?page=${page}&limit=24`;
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   useEffect(() => {
     if (categID) {

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const FavPage = ({ isLoggedIn }) => {
   const [fav, setFav] = useState([]);
 
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   useEffect(() => {
     fetchData();

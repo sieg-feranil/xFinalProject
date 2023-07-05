@@ -11,6 +11,8 @@ function SearchBar() {
     const inputRef = useRef(null);
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
     const handleSearch = async () => {
         try {
             const response = await axios.get(`https://api.jikan.moe/v4/manga?q=${mangaName}&cat=manga&page=${page}&limit=25`);
