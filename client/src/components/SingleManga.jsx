@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import ReccomendedManga from './ReccomendedManga';
 
 const SingleManga1 = ({ isLoggedIn }) => {
@@ -95,6 +95,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
 
     singleMangaData.data && (
       <div className="manga-page">
+        <Link to={'/'}><FontAwesomeIcon icon={faArrowLeft} /></Link>
         <h2>{singleMangaData.data.title}</h2>
         <div className='manga-info'>
           {singleMangaData.data.images && singleMangaData.data.images.webp && (

@@ -1496,5 +1496,371 @@
         }
       ]
     }
+  },
+  {
+    "data": {
+      "mal_id": 54,
+      "url": "https://myanimelist.net/manga/54/Yu☆Gi☆Oh",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/262097.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/262097t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/262097l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/262097.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/262097t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/262097l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Yu☆Gi☆Oh!"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yuu Gi Ou Shadow Games"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yugioh Duelist"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yu-Gi-Oh! Millenium World"
+        },
+        {
+          "type": "Synonym",
+          "title": "Game King"
+        },
+        {
+          "type": "Synonym",
+          "title": "King of Games"
+        },
+        {
+          "type": "Japanese",
+          "title": "遊☆戯☆王"
+        },
+        {
+          "type": "English",
+          "title": "Yu-Gi-Oh!"
+        }
+      ],
+      "title": "Yu☆Gi☆Oh!",
+      "title_english": "Yu-Gi-Oh!",
+      "title_japanese": "遊☆戯☆王",
+      "title_synonyms": [
+        "Yuu Gi Ou Shadow Games",
+        "Yugioh Duelist",
+        "Yu-Gi-Oh! Millenium World",
+        "Game King",
+        "King of Games"
+      ],
+      "type": "Manga",
+      "chapters": 343,
+      "volumes": 38,
+      "status": "Finished",
+      "publishing": false,
+      "published": {
+        "from": "1996-09-17T00:00:00+00:00",
+        "to": "2004-03-08T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 17,
+            "month": 9,
+            "year": 1996
+          },
+          "to": {
+            "day": 8,
+            "month": 3,
+            "year": 2004
+          }
+        },
+        "string": "Sep 17, 1996 to Mar 8, 2004"
+      },
+      "score": 7.65,
+      "scored": 7.65,
+      "scored_by": 18529,
+      "rank": 1891,
+      "popularity": 421,
+      "members": 37573,
+      "favorites": 2001,
+      "synopsis": "High school student Yuugi Mutou spends his days being bullied between classes and his nights playing board games and solving puzzles in his bedroom. Yuugi's penchant for gameplay comes from his grandfather, whose game shop also serves as a house for the two. One night, Yuugi manages to solve the Millennium Puzzle, a seemingly impossible challenge that awakens his inner darkness and converts it into an alternate persona: Yami Yuugi. Transforming into the more bold and dangerous persona against his will in moments of great distress, Yuugi begins to moonlight as a vengeful vigilante, challenging bullies and evil-doers to risky games where failure results in fates worse than death. Yuugi and his alter ego befriend some of the very students who once bullied him, forming unbreakable companionships with them. But the group must contend with villains far deadlier than the high school punks they originally rallied against, enemies who use games for nefarious purposes and threaten Yuugi and his friends' very lives. [Written by MAL Rewrite]",
+      "background": "Yu☆Gi☆Oh! spawned two card games. The first is the Bandai Official Card Game that released exclusively in Japan in 1998 alongside the Yu☆Gi☆Oh! anime and was very popular during its initial release. The second is the Konami Official Card Game that released in 1999 in Japan, which became one of the most popular card games in the world and has sold over 25 billion cards. The series was published in English by VIZ Media under the Shonen Jump imprint. The publishing is divided into three parts: 7 volumes of Yu-Gi-Oh were published from May 7, 2003 to December 7, 2004, 24-volumes of Yu-Gi-Oh!: Duelist from February 1, 2005 to December 4, 2007 and 7 volumes of Yu-Gi-Oh!: Millenium World from August 2, 2005 to February 5, 2008. A special hardcover collector's edition first volume was released on September 16, 2008. A 3-in-1 omnibus edition was published from February 3, 2015 to February 6, 2018, with the final omnibus containing volumes 37 & 38.",
+      "authors": [
+        {
+          "mal_id": 1913,
+          "type": "people",
+          "name": "Takahashi, Kazuki",
+          "url": "https://myanimelist.net/people/1913/Kazuki_Takahashi"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 83,
+          "type": "manga",
+          "name": "Shounen Jump (Weekly)",
+          "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 4,
+          "type": "manga",
+          "name": "Comedy",
+          "url": "https://myanimelist.net/manga/genre/4/Comedy"
+        },
+        {
+          "mal_id": 8,
+          "type": "manga",
+          "name": "Drama",
+          "url": "https://myanimelist.net/manga/genre/8/Drama"
+        },
+        {
+          "mal_id": 10,
+          "type": "manga",
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+        },
+        {
+          "mal_id": 7,
+          "type": "manga",
+          "name": "Mystery",
+          "url": "https://myanimelist.net/manga/genre/7/Mystery"
+        },
+        {
+          "mal_id": 37,
+          "type": "manga",
+          "name": "Supernatural",
+          "url": "https://myanimelist.net/manga/genre/37/Supernatural"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 13,
+          "type": "manga",
+          "name": "Historical",
+          "url": "https://myanimelist.net/manga/genre/13/Historical"
+        },
+        {
+          "mal_id": 23,
+          "type": "manga",
+          "name": "School",
+          "url": "https://myanimelist.net/manga/genre/23/School"
+        },
+        {
+          "mal_id": 11,
+          "type": "manga",
+          "name": "Strategy Game",
+          "url": "https://myanimelist.net/manga/genre/11/Strategy_Game"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 27,
+          "type": "manga",
+          "name": "Shounen",
+          "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        }
+      ]
+    }
+  },
+  {
+    "data": {
+      "mal_id": 54,
+      "url": "https://myanimelist.net/manga/54/Yu☆Gi☆Oh",
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/262097.jpg",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/262097t.jpg",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/262097l.jpg"
+        },
+        "webp": {
+          "image_url": "https://cdn.myanimelist.net/images/manga/2/262097.webp",
+          "small_image_url": "https://cdn.myanimelist.net/images/manga/2/262097t.webp",
+          "large_image_url": "https://cdn.myanimelist.net/images/manga/2/262097l.webp"
+        }
+      },
+      "approved": true,
+      "titles": [
+        {
+          "type": "Default",
+          "title": "Yu☆Gi☆Oh!"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yuu Gi Ou Shadow Games"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yugioh Duelist"
+        },
+        {
+          "type": "Synonym",
+          "title": "Yu-Gi-Oh! Millenium World"
+        },
+        {
+          "type": "Synonym",
+          "title": "Game King"
+        },
+        {
+          "type": "Synonym",
+          "title": "King of Games"
+        },
+        {
+          "type": "Japanese",
+          "title": "遊☆戯☆王"
+        },
+        {
+          "type": "English",
+          "title": "Yu-Gi-Oh!"
+        }
+      ],
+      "title": "Yu☆Gi☆Oh!",
+      "title_english": "Yu-Gi-Oh!",
+      "title_japanese": "遊☆戯☆王",
+      "title_synonyms": [
+        "Yuu Gi Ou Shadow Games",
+        "Yugioh Duelist",
+        "Yu-Gi-Oh! Millenium World",
+        "Game King",
+        "King of Games"
+      ],
+      "type": "Manga",
+      "chapters": 343,
+      "volumes": 38,
+      "status": "Finished",
+      "publishing": false,
+      "published": {
+        "from": "1996-09-17T00:00:00+00:00",
+        "to": "2004-03-08T00:00:00+00:00",
+        "prop": {
+          "from": {
+            "day": 17,
+            "month": 9,
+            "year": 1996
+          },
+          "to": {
+            "day": 8,
+            "month": 3,
+            "year": 2004
+          }
+        },
+        "string": "Sep 17, 1996 to Mar 8, 2004"
+      },
+      "score": 7.65,
+      "scored": 7.65,
+      "scored_by": 18529,
+      "rank": 1891,
+      "popularity": 421,
+      "members": 37573,
+      "favorites": 2001,
+      "synopsis": "High school student Yuugi Mutou spends his days being bullied between classes and his nights playing board games and solving puzzles in his bedroom. Yuugi's penchant for gameplay comes from his grandfather, whose game shop also serves as a house for the two. One night, Yuugi manages to solve the Millennium Puzzle, a seemingly impossible challenge that awakens his inner darkness and converts it into an alternate persona: Yami Yuugi. Transforming into the more bold and dangerous persona against his will in moments of great distress, Yuugi begins to moonlight as a vengeful vigilante, challenging bullies and evil-doers to risky games where failure results in fates worse than death. Yuugi and his alter ego befriend some of the very students who once bullied him, forming unbreakable companionships with them. But the group must contend with villains far deadlier than the high school punks they originally rallied against, enemies who use games for nefarious purposes and threaten Yuugi and his friends' very lives. [Written by MAL Rewrite]",
+      "background": "Yu☆Gi☆Oh! spawned two card games. The first is the Bandai Official Card Game that released exclusively in Japan in 1998 alongside the Yu☆Gi☆Oh! anime and was very popular during its initial release. The second is the Konami Official Card Game that released in 1999 in Japan, which became one of the most popular card games in the world and has sold over 25 billion cards. The series was published in English by VIZ Media under the Shonen Jump imprint. The publishing is divided into three parts: 7 volumes of Yu-Gi-Oh were published from May 7, 2003 to December 7, 2004, 24-volumes of Yu-Gi-Oh!: Duelist from February 1, 2005 to December 4, 2007 and 7 volumes of Yu-Gi-Oh!: Millenium World from August 2, 2005 to February 5, 2008. A special hardcover collector's edition first volume was released on September 16, 2008. A 3-in-1 omnibus edition was published from February 3, 2015 to February 6, 2018, with the final omnibus containing volumes 37 & 38.",
+      "authors": [
+        {
+          "mal_id": 1913,
+          "type": "people",
+          "name": "Takahashi, Kazuki",
+          "url": "https://myanimelist.net/people/1913/Kazuki_Takahashi"
+        }
+      ],
+      "serializations": [
+        {
+          "mal_id": 83,
+          "type": "manga",
+          "name": "Shounen Jump (Weekly)",
+          "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+        }
+      ],
+      "genres": [
+        {
+          "mal_id": 1,
+          "type": "manga",
+          "name": "Action",
+          "url": "https://myanimelist.net/manga/genre/1/Action"
+        },
+        {
+          "mal_id": 2,
+          "type": "manga",
+          "name": "Adventure",
+          "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        },
+        {
+          "mal_id": 4,
+          "type": "manga",
+          "name": "Comedy",
+          "url": "https://myanimelist.net/manga/genre/4/Comedy"
+        },
+        {
+          "mal_id": 8,
+          "type": "manga",
+          "name": "Drama",
+          "url": "https://myanimelist.net/manga/genre/8/Drama"
+        },
+        {
+          "mal_id": 10,
+          "type": "manga",
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+        },
+        {
+          "mal_id": 7,
+          "type": "manga",
+          "name": "Mystery",
+          "url": "https://myanimelist.net/manga/genre/7/Mystery"
+        },
+        {
+          "mal_id": 37,
+          "type": "manga",
+          "name": "Supernatural",
+          "url": "https://myanimelist.net/manga/genre/37/Supernatural"
+        }
+      ],
+      "explicit_genres": [],
+      "themes": [
+        {
+          "mal_id": 13,
+          "type": "manga",
+          "name": "Historical",
+          "url": "https://myanimelist.net/manga/genre/13/Historical"
+        },
+        {
+          "mal_id": 23,
+          "type": "manga",
+          "name": "School",
+          "url": "https://myanimelist.net/manga/genre/23/School"
+        },
+        {
+          "mal_id": 11,
+          "type": "manga",
+          "name": "Strategy Game",
+          "url": "https://myanimelist.net/manga/genre/11/Strategy_Game"
+        }
+      ],
+      "demographics": [
+        {
+          "mal_id": 27,
+          "type": "manga",
+          "name": "Shounen",
+          "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        }
+      ]
+    }
   }
 ]

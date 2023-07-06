@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 function SearchBar() {
     const [mangaName, setMangaName] = useState('');
@@ -37,11 +38,17 @@ function SearchBar() {
 
                 await delay(400);
                 await fetchData();
-        
-              } else {
-        
+
+            } else {
+
                 console.log(error);
-              }
+            }
+        }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
         }
     };
 
@@ -73,8 +80,10 @@ function SearchBar() {
                 placeholder="Search manga..."
                 ref={inputRef}
                 onClick={() => setDropdownVisible(true)}
+                onKeyDown={handleKeyDown}
             />
-            <button onClick={handleSearch}>Search</button>
+
+            <button onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
 
             {isDropdownVisible && results.length > 0 && (
                 <ul className="search-dropdown-list" ref={selectRef}>

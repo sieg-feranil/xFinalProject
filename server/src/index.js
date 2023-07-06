@@ -11,7 +11,7 @@ import bodyParser from 'body-parser'
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(cors())
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/', manga.welcome)
