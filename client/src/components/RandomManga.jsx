@@ -9,18 +9,21 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 const RandomManga = ({ isLoggedIn }) => {
     const [randomManga, setRandomManga] = useState({})
     const [refresh, setRefresh] = useState(true)
-  
+    const [loading, setLoading] = useState(true);
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   
     async function fetchData() {
       try {
+        setLoading(true);
         const response = await axios.get(`https://api.jikan.moe/v4/random/manga`);
         const data = response.data;
         setRandomManga(data);
         console.log(randomManga.data);
+        setLoading(false);
       } catch (error) {
         if (error.response && error.response.status === 429) {
 
+          setLoading(true);
           await delay(400);
           await fetchData();
   
@@ -51,6 +54,18 @@ const RandomManga = ({ isLoggedIn }) => {
     useEffect(() => {
       fetchData();
     }, [refresh]);
+
+    if (loading) {
+      return (
+      <>
+      <h2>loading random manga</h2>
+         <div className='loaderContainer'>
+        <img className='loader' src="/moon_soul_eater.png" alt="a" />
+        <h3>loading..</h3>
+      </div>
+      </>
+      )
+    }
   
     return (
       randomManga.data && (
