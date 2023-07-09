@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
 const Home1 = () => {
-  const { categID, categName } = useParams();
+  const { categID, categName, page: pageParam } = useParams();
   const [mangaData, setMangaData] = useState({});
-  const [page, setPage] = useState(1);
-  const [categPage, setCategPage] = useState(1);
+  const [page, setPage] = useState(Number(pageParam) || 1); 
+  const [categPage, setCategPage] = useState(Number(pageParam) || 1);
+  const navigate = useNavigate();
+
 
   let URL = `https://api.jikan.moe/v4/top/manga?page=${page}&limit=24`;
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -46,19 +48,24 @@ const Home1 = () => {
   const handleNextPage = () => {
     if (categID) {
       setCategPage(categPage + 1);
+      navigate(`/category/${categID}/${categName}/page/${categPage + 1}`);
     } else {
       setPage(page + 1);
+      navigate(`/page/${page + 1}`);
     }
+    
   };
 
   const handlePrevPage = () => {
     if (categID) {
       if (categPage > 1) {
         setCategPage(categPage - 1);
+        navigate(`/page/${categPage - 1}`);
       }
     } else {
       if (page > 1) {
         setPage(page - 1);
+        navigate(`/page/${page - 1}`);
       }
     }
   };

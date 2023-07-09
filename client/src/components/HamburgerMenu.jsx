@@ -22,10 +22,10 @@ function HamburgerMenu() {
   
     const handleGenreClick = (id, name) => {
       console.log(id, name);
-      if (window.location.pathname === `/category/${id}/${name}`) {
+      if (window.location.pathname === `/category/${id}/${name}/page/1`) {
         window.location.reload();
       } else {
-        window.location.href = `/category/${id}/${name}`;
+        window.location.href = `/category/${id}/${name}/page/1`;
       }
     };
   

@@ -40,7 +40,7 @@ const App = () => {
       <header className="header">
         <HamburgerMenu />
         <div className="logo">
-          <Link to="/" onClick={handleLogoClick} >Manga App</Link>
+          <Link to="/?page/?:page" onClick={handleLogoClick} >Manga App</Link>
         </div>
         <SearchBar />
         <UserMenu isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
@@ -48,7 +48,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home1 />} />
-        <Route path="/category/:categID/:categName" element={<Home1 />} />
+        <Route path="/page/:page" element={<Home1 />} />
+        <Route path="/category/:categID/:categName/page/:page" element={<Home1 />} />
         <Route path="/registration" element={<RegistrationForm />} />
         <Route path="/login" element={<LoginForm setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/manga/:mal_id" element={<SingleManga1 isLoggedIn={isLoggedIn} />} />

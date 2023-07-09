@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import ReccomendedManga from './ReccomendedManga';
@@ -11,6 +11,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
   const [isFav, setIsFav] = useState(false)
   const username = sessionStorage.getItem('username');
   const accessToken = sessionStorage.getItem('jwtToken')
+  const navigate = useNavigate();
 
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -94,8 +95,8 @@ const SingleManga1 = ({ isLoggedIn }) => {
   return (
 
     singleMangaData.data && (
-      <div className="manga-page">
-        <Link to={'/'}><FontAwesomeIcon icon={faArrowLeft} /></Link>
+      <div className="manga-page">  
+        <button onClick={()=>navigate(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>
         <h2>{singleMangaData.data.title}</h2>
         <div className='manga-info'>
           {singleMangaData.data.images && singleMangaData.data.images.webp && (
