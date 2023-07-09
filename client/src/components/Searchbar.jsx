@@ -7,7 +7,6 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 function SearchBar() {
     const [mangaName, setMangaName] = useState('');
     const [results, setResults] = useState([]);
-    const [page, setPage] = useState(1)
     const selectRef = useRef(null);
     const inputRef = useRef(null);
     const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -16,7 +15,7 @@ function SearchBar() {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`https://api.jikan.moe/v4/manga?q=${mangaName}&cat=manga&page=${page}&limit=25`);
+            const response = await axios.get(`https://api.jikan.moe/v4/manga?q=${mangaName}&cat=manga&page=1&limit=25`);
             const { data } = response;
 
             const { pagination, data: mangaData } = data;
@@ -95,7 +94,8 @@ function SearchBar() {
                             </li>
                         </Link>
                     ))}
-                    <li> <Link>show all results for {mangaName}</Link> </li>
+                    <Link to={`/results/${encodeURIComponent(mangaName)}/page/1`}>Show All Results for {mangaName}</Link>
+
                 </ul>
             )}
         </div>

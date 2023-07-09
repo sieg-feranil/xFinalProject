@@ -6,8 +6,9 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 const Home1 = () => {
   const { categID, categName, page: pageParam } = useParams();
   const [mangaData, setMangaData] = useState({});
-  const [page, setPage] = useState(Number(pageParam) || 1); 
+  const [page, setPage] = useState(Number(pageParam) || 1);
   const [categPage, setCategPage] = useState(Number(pageParam) || 1);
+  const [hasNextPage, setHasNextPage] = useState(false)
   const navigate = useNavigate();
 
 
@@ -28,6 +29,8 @@ const Home1 = () => {
       const response = await axios.get(URL);
       const data = response.data;
       setMangaData(data);
+      setHasNextPage(data.pagination.has_next_page)
+
     } catch (error) {
       if (error.response && error.response.status === 429) {
 
@@ -53,7 +56,7 @@ const Home1 = () => {
       setPage(page + 1);
       navigate(`/page/${page + 1}`);
     }
-    
+
   };
 
   const handlePrevPage = () => {
@@ -74,9 +77,9 @@ const Home1 = () => {
     <div>
       {categID ? (<h4>{categName}</h4>) : (<h4>TOP RATED MANGA</h4>)}
       <div>
-        <button onClick={handlePrevPage}>-</button>
-        <span>{categID ? categPage : page}</span>
-        <button onClick={handleNextPage}>+</button>
+        {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+        <span> {categID ? categPage : page}</span>
+        {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
       </div>
       <div className="manga-list">
         {mangaData.data &&
@@ -91,9 +94,9 @@ const Home1 = () => {
           ))}
       </div>
       <div>
-        <button onClick={handlePrevPage}>-</button>
-        <span>{categID ? categPage : page}</span>
-        <button onClick={handleNextPage}>+</button>
+        {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+        <span> {categID ? categPage : page}</span>
+        {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
       </div>
     </div>
   );

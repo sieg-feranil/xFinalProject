@@ -10,7 +10,7 @@ import SingleManga1 from './components/SingleManga';
 import UserMenu from './components/UserMenu';
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/Login';
-
+import MangaResults from './components/SearchResults';
 
 const App = () => {
 
@@ -55,6 +55,7 @@ const App = () => {
         <Route path="/manga/:mal_id" element={<SingleManga1 isLoggedIn={isLoggedIn} />} />
         <Route path='/manga/random' element={<RandomManga isLoggedIn={isLoggedIn} />} />
         <Route path="/favourites" element={<FavPage isLoggedIn={isLoggedIn} />} />
+        <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
       </Routes>
     </div>
   );
