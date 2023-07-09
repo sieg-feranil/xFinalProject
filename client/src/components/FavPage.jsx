@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const FavPage = ({ isLoggedIn }) => {
   const [fav, setFav] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -12,6 +13,7 @@ const FavPage = ({ isLoggedIn }) => {
   }, []);
 
   const fetchData = async () => {
+    setLoading(true);
     try {
       const response = await axios.get('http://localhost:3000/favourites', {
         headers: {
@@ -43,6 +45,7 @@ const FavPage = ({ isLoggedIn }) => {
       };
 
       fetchMangaDetails();
+      setLoading(false);
     } catch (error) {
       if (error.response && error.response.status === 429) {
 
@@ -73,6 +76,12 @@ const FavPage = ({ isLoggedIn }) => {
               </Link>
             </div>
           ))}
+          {loading && (
+            <div className='loaderContainer'>
+            <img className='loader' src="/moon_soul_eater.png" alt="a" />
+            <h3>loading..</h3>
+          </div>
+          )}
         </div>
       ) : (
         <span>Please log in to access this feature</span>

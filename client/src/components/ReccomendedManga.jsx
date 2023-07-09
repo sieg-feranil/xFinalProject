@@ -5,14 +5,16 @@ import { Link, useParams } from 'react-router-dom';
 function ReccomendedManga() {
   const [reccomended, setReccomended] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
   const { mal_id } = useParams();
 
   async function fetchData() {
     try {
+      setLoading(true);
       const response = await axios.get(`http://localhost:3000/manga/${encodeURIComponent(mal_id)}/recommendations`);
       const data = response.data;
       setReccomended(data);
-      // console.log(data, mal_id);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +32,18 @@ function ReccomendedManga() {
   const handlePrev = () => {
     setCurrentIndex(prevIndex => prevIndex - 4);
   };
-// console.log(currentIndex, reccomended);
+
+  if (loading) {
+    return (
+    <>
+       <div className='loaderContainer'>
+      <img className='loader' src="/moon_soul_eater.png" alt="a" />
+      <h3>loading..</h3>
+    </div>
+    </>
+    )
+  }
+
   return (
     <div>
       <div className="manga-list">

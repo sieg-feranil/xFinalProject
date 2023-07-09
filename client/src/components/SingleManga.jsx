@@ -9,6 +9,7 @@ const SingleManga1 = ({ isLoggedIn }) => {
   const { mal_id } = useParams();
   const [singleMangaData, setSingleMangaData] = useState({});
   const [isFav, setIsFav] = useState(false)
+  const [loading, setLoading] = useState(true);
   const username = sessionStorage.getItem('username');
   const accessToken = sessionStorage.getItem('jwtToken')
   const navigate = useNavigate();
@@ -17,10 +18,12 @@ const SingleManga1 = ({ isLoggedIn }) => {
 
   async function fetchData() {
     try {
+      setLoading(true);
       const response = await axios.get(`https://api.jikan.moe/v4/manga/${encodeURIComponent(mal_id)}`);
       const data = response.data;
       setSingleMangaData(data);
       console.log(singleMangaData.data);
+      setLoading(false);
     } catch (error) {
       if (error.response && error.response.status === 429) {
 
@@ -91,6 +94,19 @@ const SingleManga1 = ({ isLoggedIn }) => {
     fetchData();
     checkIfFav();
   }, [mal_id]);
+
+
+  if (loading) {
+    return (
+    <>
+    <h2>loading manga: "{mal_id}"</h2>
+       <div className='loaderContainer'>
+      <img className='loader' src="/moon_soul_eater.png" alt="a" />
+      <h3>loading..</h3>
+    </div>
+    </>
+    )
+  }
 
   return (
 

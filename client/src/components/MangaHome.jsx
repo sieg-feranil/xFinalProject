@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
-
 const Home1 = () => {
   const { categID, categName, page: pageParam } = useParams();
   const [mangaData, setMangaData] = useState({});
   const [page, setPage] = useState(Number(pageParam) || 1);
   const [categPage, setCategPage] = useState(Number(pageParam) || 1);
-  const [hasNextPage, setHasNextPage] = useState(false)
+  const [hasNextPage, setHasNextPage] = useState(false);
+  const [loading, setLoading] = useState(true); // Stato di caricamento
   const navigate = useNavigate();
-
 
   let URL = `https://api.jikan.moe/v4/top/manga?page=${page}&limit=24`;
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -23,23 +22,21 @@ const Home1 = () => {
     }
   }, [categID, categPage, page]);
 
-
   async function fetchData() {
     try {
+      setLoading(true);
       const response = await axios.get(URL);
       const data = response.data;
       setMangaData(data);
-      setHasNextPage(data.pagination.has_next_page)
-
+      setHasNextPage(data.pagination.has_next_page);
+      setLoading(false); // Imposta lo stato di caricamento a "false" dopo aver ricevuto la risposta
     } catch (error) {
       if (error.response && error.response.status === 429) {
-
         await delay(400);
         await fetchData();
-
       } else {
-
         console.log(error);
+        setLoading(false); // Imposta lo stato di caricamento a "false" anche in caso di errore
       }
     }
   }
@@ -56,7 +53,6 @@ const Home1 = () => {
       setPage(page + 1);
       navigate(`/page/${page + 1}`);
     }
-
   };
 
   const handlePrevPage = () => {
@@ -73,13 +69,30 @@ const Home1 = () => {
     }
   };
 
+  if (loading) {
+    return (
+    <>
+    {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
+    <div>
+        {page !== 1 && <button onClick={()=>alert('chill')}>-</button>}
+        <span> {categID ? categPage : page}</span>
+        {hasNextPage && <button onClick={()=>alert('are you in a hurry?')}>+</button>}
+      </div>
+       <div className='loaderContainer'>
+      <img className='loader' src="/moon_soul_eater.png" alt="a" />
+      <h3>loading..</h3>
+    </div>
+    </>
+    )
+  }
+
   return (
     <div>
-      {categID ? (<h4>{categName}</h4>) : (<h4>TOP RATED MANGA</h4>)}
+      {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
       <div>
-        {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+        {page !== 1 && <button onClick={handlePrevPage}>-</button>}
         <span> {categID ? categPage : page}</span>
-        {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
+        {hasNextPage && <button onClick={handleNextPage}>+</button>}
       </div>
       <div className="manga-list">
         {mangaData.data &&
@@ -94,9 +107,9 @@ const Home1 = () => {
           ))}
       </div>
       <div>
-        {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+        {page !== 1 && <button onClick={handlePrevPage}>-</button>}
         <span> {categID ? categPage : page}</span>
-        {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
+        {hasNextPage && <button onClick={handleNextPage}>+</button>}
       </div>
     </div>
   );

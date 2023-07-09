@@ -6,14 +6,15 @@ const MangaResults = () => {
     const { page: pageParam, mangaName } = useParams();
     const [mangaData, setMangaData] = useState([]);
     const [page, setPage] = useState(Number(pageParam) || 1);
-    const [hasNextPage, setHasNextPage] =useState(false)
+    const [hasNextPage, setHasNextPage] = useState(false)
+    const [loading, setLoading] = useState(true);
 
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 
     async function fetchData() {
         try {
-
+            setLoading(true);
             const response = await axios.get(
                 `https://api.jikan.moe/v4/manga?q=${mangaName}&cat=manga&page=${page}&limit=24`
             );
@@ -21,6 +22,7 @@ const MangaResults = () => {
             console.log(response);
             setMangaData(data.data);
             setHasNextPage(data.pagination.has_next_page)
+            setLoading(false);
 
         } catch (error) {
             if (error.response && error.response.status === 429) {
@@ -50,13 +52,30 @@ const MangaResults = () => {
         navigate(`/results/${mangaName}/page/${page - 1}`);
     }
 
+    if (loading) {
+        return (
+        <>
+        <h2>Results for "{mangaName}"</h2>
+        <div>
+            {page !== 1 && <button onClick={()=>alert('chill')}>-</button>}
+            <span> { page }</span>
+            {hasNextPage && <button onClick={()=>alert('are you in a hurry?')}>+</button>}
+          </div>
+           <div className='loaderContainer'>
+          <img className='loader' src="/moon_soul_eater.png" alt="a" />
+          <h3>loading..</h3>
+        </div>
+        </>
+        )
+      }
+
     return (
         <div>
             <h2>Results for "{mangaName}"</h2>
             <div>
-                {page!==1 && (<button onClick={handlePrevPage}>-</button>)}
-                <span>{ page }</span>
-                {hasNextPage && ( <button onClick={handleNextPage}>+</button>)}
+                {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+                <span>{page}</span>
+                {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
             </div>
             <div className="manga-list">
                 {mangaData.map((manga) => (
@@ -69,9 +88,9 @@ const MangaResults = () => {
                 ))}
             </div>
             <div>
-                {page!==1 && (<button onClick={handlePrevPage}>-</button>)}
-                <span>{ page }</span>
-                {hasNextPage && ( <button onClick={handleNextPage}>+</button>)}
+                {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
+                <span>{page}</span>
+                {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
             </div>
         </div>
     );

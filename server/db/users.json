@@ -12,10 +12,7 @@
   "vanessa": {
     "email": "vanessapuzza@spongebon.it",
     "password": "asdasda",
-    "fav": [
-      "2",
-      "8"
-    ]
+    "fav": []
   },
   "username": {
     "email": "asdcriri@iasodi.com",
@@ -36,11 +33,10 @@
     "email": "abcdef@abcdef.it",
     "password": "$2b$10$JuQYZAgzGhokdT0HvmmRC.9L/sxqMp..3ZXCRlXlaRPe2rcSGPYAG",
     "fav": [
-      "13",
       "2",
       "656",
-      "1",
-      "54"
+      "13",
+      "4632"
     ]
   }
 }

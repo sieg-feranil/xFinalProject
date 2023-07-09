@@ -1,4 +1,3 @@
-import manga from "../db/mangalist.json" assert { type: "json"}
 import users from "../db/users.json" assert {type: "json"}
 import genres from "../db/genres.json" assert {type: "json"}
 import favs from "../db/favs.json" assert {type: "json"}
@@ -7,7 +6,7 @@ import fs from 'fs/promises'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import 'dotenv/config'
-const DB_PATH_MANGA = './db/mangalist.json'
+
 const DB_PATH_USERS = './db/users.json'
 const DB_PATH_FAVS = './db/favs.json'
 
@@ -155,7 +154,7 @@ export const addFav = async (req, res) => {
       try {
 
         response = await axios.get(`https://api.jikan.moe/v4/manga/${id}`);
-        break; // Esci dal loop se la richiesta ha avuto successo
+        break; 
 
       } catch (error) {
         if (error.response && error.response.status === 429) {
@@ -170,8 +169,8 @@ export const addFav = async (req, res) => {
       }
     }
 
-    if (response && !favs.includes(response.data)) {
-      favs.push(response.data);
+    if (!favs[id]) {
+      favs[id] = response.data.data;
       await fs.writeFile(DB_PATH_FAVS, JSON.stringify(favs, null, '  '));
     }
 
@@ -213,10 +212,6 @@ export const deleteFav = async (req, res) => {
       
     users[username].fav = users[username].fav.filter((favId) => favId !== id);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
-
-    let updatedFavs = favs.filter((mangaObj) => mangaObj.data.mal_id.toString() !== id.toString());
-    console.log(updatedFavs);
-    await fs.writeFile(DB_PATH_FAVS, JSON.stringify(updatedFavs, null, '  '));
 
     console.log(users[username].fav);
     res.send(users[username].fav);

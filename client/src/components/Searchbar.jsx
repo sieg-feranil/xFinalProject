@@ -10,6 +10,7 @@ function SearchBar() {
     const selectRef = useRef(null);
     const inputRef = useRef(null);
     const [isDropdownVisible, setDropdownVisible] = useState(false);
+    const [showNoResults, setShowNoResults] = useState(false); // Stato per visualizzare "No results found"
 
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -32,6 +33,12 @@ function SearchBar() {
 
             setResults(mangaData);
             setDropdownVisible(true);
+
+            if (mangaData.length == 0) {
+                setShowNoResults(true);
+            } else {
+                setShowNoResults(false);
+            }
         } catch (error) {
             if (error.response && error.response.status === 429) {
 
@@ -84,22 +91,30 @@ function SearchBar() {
 
             <button onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
 
-            {isDropdownVisible && results.length > 0 && (
+            {isDropdownVisible && (
                 <ul className="search-dropdown-list" ref={selectRef}>
-                    {results.map((manga) => (
-                        <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`}>
-                            <li key={manga.mal_id}>
-                                <img src={manga.images.webp.small_image_url} alt={manga.title} />
-                                {manga.title}
-                            </li>
-                        </Link>
-                    ))}
-                    <Link to={`/results/${encodeURIComponent(mangaName)}/page/1`}>Show All Results for {mangaName}</Link>
+                    {results.length > 0 ? (
+                        results.map((manga) => (
+                            <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`} key={manga.mal_id}>
+                                <li>
+                                    <img src={manga.images.webp.small_image_url} alt={manga.title} />
+                                    {manga.title}
+                                </li>
+                            </Link>
+                        ))
+                    ) : (
+                        showNoResults && <li>No results found.</li> // Mostra il messaggio solo quando showNoResults è true
+                    )}
 
+                    {results.length > 0 && (
+                        <Link to={`/results/${encodeURIComponent(mangaName)}/page/1`}>
+                            Show All Results for {mangaName}
+                        </Link>
+                    )}
                 </ul>
             )}
         </div>
     );
 }
 
-export default SearchBar
+export default SearchBar;
