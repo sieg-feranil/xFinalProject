@@ -24,7 +24,6 @@ const Home1 = () => {
 
   async function fetchData() {
     try {
-      setLoading(true);
       const response = await axios.get(URL);
       const data = response.data;
       setMangaData(data);
@@ -32,6 +31,7 @@ const Home1 = () => {
       setLoading(false); // Imposta lo stato di caricamento a "false" dopo aver ricevuto la risposta
     } catch (error) {
       if (error.response && error.response.status === 429) {
+        setLoading(true);
         await delay(400);
         await fetchData();
       } else {
@@ -40,6 +40,10 @@ const Home1 = () => {
       }
     }
   }
+
+  useEffect(() => {
+    console.log('chhanged');
+  }, [loading]);
 
   useEffect(() => {
     fetchData();
