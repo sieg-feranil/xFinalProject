@@ -1,6 +1,7 @@
 /* App.css */
 *{
   list-style: none;
+  box-sizing: border-box;
 }
 .app {
   margin: 80px auto 0; /* Aggiungi un margine superiore di 80px */
@@ -13,7 +14,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #333;
+  background-color: rgb(51, 51, 51);
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -35,7 +36,7 @@
   font-weight: bold;
 }
 
-/* Resto dello stile rimane invariato */
+
 
 .manga-list {
   display: grid;
@@ -45,7 +46,7 @@
 
 .manga-card {
   border-radius: 10px;
-  background-color: #444;
+  background-color: rgb(68, 68, 68);
   padding: 10px;
 }
 
@@ -70,7 +71,7 @@
 .manga-card span {
   display: inline-block;
   background-color: #ff9800;
-  color: #333;
+  color: rgb(51, 51, 51);
   padding: 5px 10px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -84,107 +85,10 @@
 }
 
 
-.hamburger-menu {
-  background-color: #333;
-  width: 200px;
-  height: 100vh;
-  justify-content: center;
-  position: fixed;
-  margin-top: 70px;
-  top: 0;
-  left: -100%;
-  transition: 850ms;
-  overflow-y: auto;
-}
-
-.hamburger-menu.active {
-  left: 0;
-  transition: 350ms;
-}
-
-.hamburger-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0px 8px 16px;
-  list-style: none;
-  height: 60px;
-  background: none;
-  border: none;
-}
-.hamburger-text:focus {
-  outline: none; /* Rimuove l'outline/focus al click */
-}
-.hamburger-text span {
-  margin-right: 15px; /* Aggiungi spazio a destra del testo */
-}
-
-
-
-.hamburger-menu-items {
-  width: 100%;
-  overflow-y: auto;
-  padding-bottom: 10px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.hamburger-menu::-webkit-scrollbar {
-  display: none;
-}
-
-.hamburgerbar-toggle {
-  background-color: #444;
-  width: 60%;
-  height: 50px;
-  display: flex;
-  align-self: center;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
 span {
   margin-left: 16px;
 }
 
-
-.user-menu {
-  background-color:#333;
-  width: 160px;
-  height: 15vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  margin-top: 60px;
-  top: 0;
-  right: -100%;
-  transition: 850ms;
-  border-radius: 10px;
-}
-
-.user-menu.active {
-  right: 0;
-  transition: 350ms;
-}
-
-
-
-.user-text {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 8px 0px 8px 16px;
-  list-style: none;
-  height: 60px;
-}
-
-
-
-.user-menu-items {
-  width: 100%;
-
-}
 
 
 .manga-info {
@@ -201,34 +105,7 @@ span {
   font-size: large;
 }
 
-#Yui{
-  height:250px
-}
-
-/* searchvar */
-.search-dropdown-list {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 50%;
-  max-height: 200px;
-  overflow-y: auto;
-  background-color: #333; /* Colore di sfondo scuro */
-  color: #fff; /* Colore del testo */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.search-dropdown-list li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.search-dropdown-list li:hover {
-  background-color: #444; /* Colore di sfondo scuro più scuro al passaggio del mouse */
-}
-
+/* loader */
 
 .loaderContainer {
   display: flex;

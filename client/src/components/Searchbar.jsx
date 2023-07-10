@@ -80,6 +80,7 @@ function SearchBar() {
 
     return (
         <div className="dropdown">
+            <div className='searchbar'>
             <input
                 type="text"
                 value={mangaName}
@@ -89,9 +90,8 @@ function SearchBar() {
                 onClick={() => setDropdownVisible(true)}
                 onKeyDown={handleKeyDown}
             />
-
             <button onClick={handleSearch}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-
+            </div>
             {isDropdownVisible && (
                 <ul className="search-dropdown-list" ref={selectRef}>
                     {results.length > 0 ? (
@@ -108,9 +108,11 @@ function SearchBar() {
                     )}
 
                     {results.length > 0 && (
+                        <li id='showResults'>
                         <Link to={`/results/${encodeURIComponent(mangaName)}/page/1`}>
                             Show All Results for {mangaName}
                         </Link>
+                        </li>
                     )}
                 </ul>
             )}

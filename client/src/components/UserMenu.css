@@ -1,0 +1,40 @@
+.user-menu {
+    background-color:#333;
+    width: 160px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin-top: 60px;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+    border-radius: 10px;
+  }
+  
+  .user-menu.active {
+    right: 0;
+    transition: 350ms;
+  }
+  
+  
+  
+  .user-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  
+  
+  .user-menu-items {
+    width: 100%;
+  
+  }
+
+  #Yui{
+    height:250px
+  }
