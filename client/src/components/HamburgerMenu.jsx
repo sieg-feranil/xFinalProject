@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import './HamburgerMenu.css'
 
 function HamburgerMenu() {
     const [sidebar, setSidebar] = useState(false);

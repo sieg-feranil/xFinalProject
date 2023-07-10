@@ -4,6 +4,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import ReccomendedManga from './ReccomendedManga';
+import './SingleManga.css'
 
 const SingleManga1 = ({ isLoggedIn }) => {
   const { mal_id } = useParams();

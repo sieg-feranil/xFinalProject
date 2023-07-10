@@ -35,18 +35,6 @@
   font-weight: bold;
 }
 
-.signup-login {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-size: 24px; /* Aumenta la dimensione del testo dell'icona utente */
-}
-
-.signup-login:hover {
-  color: #ff9800;
-}
-
 /* Resto dello stile rimane invariato */
 
 .manga-list {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import './MangaHome.css'
 
 const Home1 = () => {
   const { categID, categName, page: pageParam } = useParams();
@@ -24,6 +25,7 @@ const Home1 = () => {
 
   async function fetchData() {
     try {
+      setLoading(true)
       const response = await axios.get(URL);
       const data = response.data;
       setMangaData(data);
@@ -41,9 +43,6 @@ const Home1 = () => {
     }
   }
 
-  useEffect(() => {
-    console.log('chhanged');
-  }, [loading]);
 
   useEffect(() => {
     fetchData();
