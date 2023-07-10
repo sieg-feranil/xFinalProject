@@ -13,6 +13,13 @@ const RegistrationForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const passwordRegex = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,}$/;
+        if (!passwordRegex.test(password)) {
+          setError('La password deve avere almeno 4 caratteri, una lettera maiuscola, un numero e un carattere speciale');
+          return;
+        }
+        
         try {
             await axios.post('http://localhost:3000/registration', {
                 [username]: {
