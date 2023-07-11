@@ -87,7 +87,7 @@ const Home1 = () => {
           {page !== 1 ? (
             <button onClick={() => alert('chill')}>-</button>
           ) : (
-            <img />
+            <img id="noPrev" alt="umaru" src={'/umaru.png'}/>
           )}
           <span> {page}</span>
           {hasNextPage && <button onClick={() => alert('are you in a hurry?')}>+</button>}
@@ -107,7 +107,8 @@ const Home1 = () => {
         {page !== 1 ? (
           <button onClick={handlePrevPage}>-</button>
         ) : (
-          <img />
+          <img id="noPrev" alt="umaru" src={'/umaru.png'}/>
+
         )}
         <span> {page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
@@ -129,7 +130,7 @@ const Home1 = () => {
         {page !== 1 ? (
           <button onClick={handlePrevPage}>-</button>
         ) : (
-          <img />
+          <img id="noPrev" alt="char" src={'/char.png'}/>
         )}
         <span> {page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
