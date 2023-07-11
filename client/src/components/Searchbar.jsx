@@ -19,7 +19,6 @@ function SearchBar() {
         try {
             const response = await axios.get(`https://api.jikan.moe/v4/manga?q=${mangaName}&cat=manga&page=1&limit=25`);
             const { data } = response;
-
             const { pagination, data: mangaData } = data;
             const { items } = pagination;
 
