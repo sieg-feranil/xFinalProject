@@ -8,6 +8,7 @@ const Home1 = () => {
   const [mangaData, setMangaData] = useState({});
   const [page, setPage] = useState(Number(pageParam) || 1);
   const [hasNextPage, setHasNextPage] = useState(false);
+  const [lastPage, setLastPage] = useState(0)
   const [loading, setLoading] = useState(true); // Stato di caricamento
   const navigate = useNavigate();
 
@@ -29,6 +30,7 @@ const Home1 = () => {
       const data = response.data;
       setMangaData(data);
       setHasNextPage(data.pagination.has_next_page);
+      setLastPage(data.pagination.last_visible_page)
       setLoading(false); // Imposta lo stato di caricamento a "false" dopo aver ricevuto la risposta
     } catch (error) {
       if (error.response && error.response.status === 429) {
@@ -71,24 +73,30 @@ const Home1 = () => {
     }
   };
 
+
+  if (page>lastPage) {
+    navigate('/404')
+  }
+  
+
   if (loading) {
     return (
-      <>
+      <div className='mangaDisplay'>
         {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
         <div className='pageControl'>
           {page !== 1 ? (
-            <button onClick={handlePrevPage}>-</button>
+            <button onClick={() => alert('chill')}>-</button>
           ) : (
             <img />
           )}
           <span> {page}</span>
-          {hasNextPage && <button onClick={handleNextPage}>+</button>}
+          {hasNextPage && <button onClick={() => alert('are you in a hurry?')}>+</button>}
         </div>
         <div className='loaderContainer'>
           <img className='loader' src="/moon_soul_eater.png" alt="a" />
           <h3>loading..</h3>
         </div>
-      </>
+      </div>
     )
   }
 
@@ -110,8 +118,9 @@ const Home1 = () => {
             <div key={manga.title} className="manga-card">
               <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`}>
                 <img src={manga.images.webp.image_url} alt={manga.title} />
-                <span>{manga.rank}</span>
                 <h4>{manga.title}</h4>
+                <span>RANK:{manga.rank}</span>
+                <span>SCORE:{manga.score}</span>
               </Link>
             </div>
           ))}

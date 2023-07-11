@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     width: auto;
-}
-
-.mangaDisplay h3 {
+  }
+  
+  .mangaDisplay h3 {
     align-self: center;
-}
-
-.pageControl {
+  }
+  
+  .pageControl {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,56 +16,88 @@
     justify-content: space-evenly;
     margin: 20px;
     text-align: center;
-}
-
-.pageControl span {
+  }
+  
+  .pageControl span {
     margin: auto;
-}
-
-.manga-list {
+  }
+  
+  .manga-list {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    /*auto-fill, minmax(250px, 1fr*/
     gap: 20px;
-}
-
-.manga-card {
+  }
+  
+  .manga-card {
     border-radius: 10px;
     background-color: rgb(68, 68, 68);
     padding: 10px;
-    width: auto;
-}
-
-.manga-card a {
+    width: 180px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .manga-card h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+  }
+  
+  .manga-card a span {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 12px;
+  }
+  
+  .manga-card a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease;
-}
-
-.manga-card a:hover {
+    transition: color 0.5s ease;
+  }
+  
+  .manga-card:hover {
+    background-color: rgb(102, 102, 102);
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    height: auto;
+  }
+  
+  .manga-card:hover a span {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .manga-card:hover h4 {
+    font-size: 12px;
+    font-weight: small;
+    overflow: visible;
+    white-space: wrap;
+  }
+  
+  .manga-card a:hover {
     color: #ff9900;
-}
-
-.manga-card img {
+  }
+  
+  .manga-card img {
     width: 160px;
     height: 270px;
     border-radius: 10px;
     margin-bottom: 10px;
-
-}
-
-.manga-card span {
+  }
+  
+  .manga-card span {
     display: inline-block;
     background-color: #ff9800;
     color: rgb(51, 51, 51);
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 5px;
     margin-bottom: 10px;
     font-weight: bold;
-}
-
-.manga-card h4 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
+    border: 1px solid;
+    margin-top: 10%;
+  }
+  
