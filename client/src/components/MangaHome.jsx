@@ -7,7 +7,6 @@ const Home1 = () => {
   const { categID, categName, page: pageParam } = useParams();
   const [mangaData, setMangaData] = useState({});
   const [page, setPage] = useState(Number(pageParam) || 1);
-  const [categPage, setCategPage] = useState(Number(pageParam) || 1);
   const [hasNextPage, setHasNextPage] = useState(false);
   const [loading, setLoading] = useState(true); // Stato di caricamento
   const navigate = useNavigate();
@@ -17,11 +16,11 @@ const Home1 = () => {
 
   useEffect(() => {
     if (categID) {
-      URL = `https://api.jikan.moe/v4/manga?genres=${categID}&page=${categPage}&limit=24`;
+      URL = `https://api.jikan.moe/v4/manga?genres=${categID}&page=${page}&limit=24`;
     } else {
       URL = `https://api.jikan.moe/v4/top/manga?page=${page}&limit=24`;
     }
-  }, [categID, categPage, page]);
+  }, [categID, page]);
 
   async function fetchData() {
     try {
@@ -46,12 +45,12 @@ const Home1 = () => {
 
   useEffect(() => {
     fetchData();
-  }, [page, categPage, categID]);
+  }, [page, categID]);
 
   const handleNextPage = () => {
     if (categID) {
-      setCategPage(categPage + 1);
-      navigate(`/category/${categID}/${categName}/page/${categPage + 1}`);
+      setPage(page + 1);
+      navigate(`/category/${categID}/${categName}/page/${page + 1}`);
     } else {
       setPage(page + 1);
       navigate(`/page/${page + 1}`);
@@ -60,9 +59,9 @@ const Home1 = () => {
 
   const handlePrevPage = () => {
     if (categID) {
-      if (categPage > 1) {
-        setCategPage(categPage - 1);
-        navigate(`/page/${categPage - 1}`);
+      if (page > 1) {
+        setPage(page - 1);
+        navigate(`/category/${categID}/${categName}/page/${page - 1}`);
       }
     } else {
       if (page > 1) {
@@ -74,18 +73,22 @@ const Home1 = () => {
 
   if (loading) {
     return (
-    <>
-    {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
-    <div className='pageControl'>
-        {page !== 1 && <button onClick={()=>alert('chill')}>-</button>}
-        <span> {categID ? categPage : page}</span>
-        {hasNextPage && <button onClick={()=>alert('are you in a hurry?')}>+</button>}
-      </div>
-       <div className='loaderContainer'>
-      <img className='loader' src="/moon_soul_eater.png" alt="a" />
-      <h3>loading..</h3>
-    </div>
-    </>
+      <>
+        {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
+        <div className='pageControl'>
+          {page !== 1 ? (
+            <button onClick={handlePrevPage}>-</button>
+          ) : (
+            <img />
+          )}
+          <span> {page}</span>
+          {hasNextPage && <button onClick={handleNextPage}>+</button>}
+        </div>
+        <div className='loaderContainer'>
+          <img className='loader' src="/moon_soul_eater.png" alt="a" />
+          <h3>loading..</h3>
+        </div>
+      </>
     )
   }
 
@@ -93,8 +96,12 @@ const Home1 = () => {
     <div className='mangaDisplay'>
       {categID ? <h3>{categName}</h3> : <h3>TOP RATED MANGA</h3>}
       <div className='pageControl'>
-        {categID? categPage:page !== 1 && <button onClick={handlePrevPage}>-</button>}
-        <span> {categID ? categPage : page}</span>
+        {page !== 1 ? (
+          <button onClick={handlePrevPage}>-</button>
+        ) : (
+          <img />
+        )}
+        <span> {page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
       </div>
       <div className="manga-list">
@@ -110,8 +117,12 @@ const Home1 = () => {
           ))}
       </div>
       <div className='pageControl'>
-        {page !== 1 && <button onClick={handlePrevPage}>-</button>}
-        <span> {categID ? categPage : page}</span>
+        {page !== 1 ? (
+          <button onClick={handlePrevPage}>-</button>
+        ) : (
+          <img />
+        )}
+        <span> {page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
       </div>
     </div>
