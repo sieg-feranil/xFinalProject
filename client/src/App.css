@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   background-color: rgb(51, 51, 51);
-  padding: 15px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,10 +84,13 @@
   font-weight: bold;
 }
 
-
-span {
-  margin-left: 16px;
-}
+/* easter egg */
+/* a:hover span:nth-child(2) {
+  padding: 4px;
+  background-color: #ff9800;
+  border-radius: 8px;
+  color: black;
+} */
 
 
 
@@ -115,8 +118,8 @@ span {
 }
 .loader {
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   animation: spin 3s linear infinite;
 }
 

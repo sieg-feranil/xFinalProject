@@ -4,12 +4,12 @@
     height: 30px;
 }
 
-.searchbar input[type="text"],
+.searchbar input,
 .searchbar button {
     height: 100%;
 }
 
-.searchbar input[type="text"] {
+.searchbar input {
     flex: 1;
     background-color: transparent;
     border: none;
@@ -17,15 +17,15 @@
     border-radius: 10px 0 0 10px;
     padding-left: 10px;
 }
-.searchbar input[type="text"]:focus,
-.searchbar input[type="text"]:focus::placeholder {
+.searchbar input:focus,
+.searchbar input:focus::placeholder {
     border-radius: 10px 0 0 10px;
     outline: none;
     background-color: rgb(255, 153, 00);
     color: rgb(51, 51, 51);
 }
 
-.searchbar input[type="text"]::placeholder {
+.searchbar input::placeholder {
     color: rgb(255, 255, 255);
 }
 
