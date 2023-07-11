@@ -76,7 +76,7 @@ const Home1 = () => {
     return (
     <>
     {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
-    <div>
+    <div className='pageControl'>
         {page !== 1 && <button onClick={()=>alert('chill')}>-</button>}
         <span> {categID ? categPage : page}</span>
         {hasNextPage && <button onClick={()=>alert('are you in a hurry?')}>+</button>}
@@ -90,10 +90,10 @@ const Home1 = () => {
   }
 
   return (
-    <div>
-      {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
-      <div>
-        {page !== 1 && <button onClick={handlePrevPage}>-</button>}
+    <div className='mangaDisplay'>
+      {categID ? <h3>{categName}</h3> : <h3>TOP RATED MANGA</h3>}
+      <div className='pageControl'>
+        {categID? categPage:page !== 1 && <button onClick={handlePrevPage}>-</button>}
         <span> {categID ? categPage : page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
       </div>
@@ -109,7 +109,7 @@ const Home1 = () => {
             </div>
           ))}
       </div>
-      <div>
+      <div className='pageControl'>
         {page !== 1 && <button onClick={handlePrevPage}>-</button>}
         <span> {categID ? categPage : page}</span>
         {hasNextPage && <button onClick={handleNextPage}>+</button>}
