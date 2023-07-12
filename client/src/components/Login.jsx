@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 
 
@@ -9,6 +9,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginStatus, setLoginStatus] = useState('')
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();//check
@@ -21,7 +22,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             setLoginStatus('succesfuly logged-in')
             sessionStorage.setItem('jwtToken', res.data.accessToken);
             sessionStorage.setItem('username', res.data.username);
-            window.location.href = '/';
+            navigate('/')
           } catch (error) {
             setLoginStatus(error.response.data); // Imposta il messaggio di errore
           }

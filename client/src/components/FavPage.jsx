@@ -85,7 +85,10 @@ const FavPage = ({ isLoggedIn }) => {
           )}
         </div>
       ) : (
-        <span>Please log in to access this feature</span>
+        <div className='PleaseLogin'>
+          <img id="YuiStops" alt="Yui" src='/stop.png'/>
+          <h2>Please <Link to={'/login'}>login</Link> / <Link to={'/registration'}>register</Link> to access this feature</h2>
+        </div>
       )}
     </>
   );

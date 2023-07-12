@@ -57,7 +57,7 @@ const App = () => {
         <Route path='/manga/random' element={<RandomManga isLoggedIn={isLoggedIn} />} />
         <Route path="/favourites" element={<FavPage isLoggedIn={isLoggedIn} />} />
         <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
-        <Route path="/404" element={<NotFound/>}/>
+        <Route path="/error404" element={<NotFound/>}/>
       </Routes>
     </div>
   );

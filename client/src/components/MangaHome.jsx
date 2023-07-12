@@ -8,8 +8,7 @@ const Home1 = () => {
   const [mangaData, setMangaData] = useState({});
   const [page, setPage] = useState(Number(pageParam) || 1);
   const [hasNextPage, setHasNextPage] = useState(false);
-  const [lastPage, setLastPage] = useState(0)
-  const [loading, setLoading] = useState(true); // Stato di caricamento
+  const [loading, setLoading] = useState(true); 
   const navigate = useNavigate();
 
   let URL = `https://api.jikan.moe/v4/top/manga?page=${page}&limit=24`;
@@ -30,8 +29,8 @@ const Home1 = () => {
       const data = response.data;
       setMangaData(data);
       setHasNextPage(data.pagination.has_next_page);
-      setLastPage(data.pagination.last_visible_page)
-      setLoading(false); // Imposta lo stato di caricamento a "false" dopo aver ricevuto la risposta
+      if(data.pagination.items.count==0) navigate('/error404')
+      setLoading(false); 
     } catch (error) {
       if (error.response && error.response.status === 429) {
         setLoading(true);
@@ -39,7 +38,7 @@ const Home1 = () => {
         await fetchData();
       } else {
         console.log(error);
-        setLoading(false); // Imposta lo stato di caricamento a "false" anche in caso di errore
+        setLoading(false); 
       }
     }
   }
@@ -74,15 +73,12 @@ const Home1 = () => {
   };
 
 
-  if (page>lastPage) {
-    navigate('/404')
-  }
   
 
   if (loading) {
     return (
       <div className='mangaDisplay'>
-        {categID ? <h4>{categName}</h4> : <h4>TOP RATED MANGA</h4>}
+        {categID ? <h3>{categName}</h3> : <h3>TOP RATED MANGA</h3>}
         <div className='pageControl'>
           {page !== 1 ? (
             <button onClick={() => alert('chill')}>-</button>
@@ -115,8 +111,8 @@ const Home1 = () => {
       </div>
       <div className="manga-list">
         {mangaData.data &&
-          mangaData.data.map((manga) => (
-            <div key={manga.title} className="manga-card">
+          mangaData.data.map((manga, i) => (
+            <div key={manga.title + ''+i} className="manga-card">
               <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`}>
                 <img src={manga.images.webp.image_url} alt={manga.title} />
                 <h4>{manga.title}</h4>
