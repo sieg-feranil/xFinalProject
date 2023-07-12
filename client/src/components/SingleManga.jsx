@@ -30,8 +30,11 @@ const SingleManga1 = ({ isLoggedIn }) => {
 
         await delay(400);
         await fetchData();
-
-      } else {
+      }
+      else if (error.response && error.response.status === 404){
+        navigate('/error404')
+      }
+       else {
 
         console.log(error);
       }

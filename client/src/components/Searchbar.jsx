@@ -106,7 +106,7 @@ function SearchBar() {
                     )}
 
                     {results.length > 0 && (
-                        <li id='showResults'>
+                        <li id='showResults' style={{ marginBottom: '15px' }}>
                         <Link to={`/results/${encodeURIComponent(mangaName)}/page/1`}>
                             Show All Results for {mangaName}
                         </Link>
