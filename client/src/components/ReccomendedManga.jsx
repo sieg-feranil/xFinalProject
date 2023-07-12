@@ -48,6 +48,7 @@ function ReccomendedManga() {
   return (
     <div>
       <div className="manga-list">
+        {reccomended.length==0 && (<h3>no reccomended manga</h3>)}
         {reccomended && reccomended.slice(currentIndex, currentIndex + 4).map((manga) => (
           <div key={manga.entry.title} className="manga-card">
             <Link to={`/manga/${encodeURIComponent(manga.entry.mal_id)}`}>

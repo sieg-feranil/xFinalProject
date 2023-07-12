@@ -50,7 +50,7 @@ export const register = async (req, res) => {
     );
 
     if (existingUserByUsername) return res.status(400).send('Username already exists');
-      
+
 
     // Controllo se esiste già un utente con la stessa email
     const existingUserByEmail = Object.values(users).find(
@@ -58,7 +58,7 @@ export const register = async (req, res) => {
     );
 
     if (existingUserByEmail) return res.status(400).send('Email already exists');
-      
+
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -72,7 +72,7 @@ export const register = async (req, res) => {
         },
       },
     };
-    
+
     console.log(updatedUsers);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(updatedUsers, null, '  '));
     res.send('ok').end();
@@ -154,7 +154,7 @@ export const addFav = async (req, res) => {
       try {
 
         response = await axios.get(`https://api.jikan.moe/v4/manga/${id}`);
-        break; 
+        break;
 
       } catch (error) {
         if (error.response && error.response.status === 429) {
@@ -209,7 +209,7 @@ export const deleteFav = async (req, res) => {
   try {
     const { id, username } = req.headers;
     if (!users[username]) return res.status(404).send('User not found');
-      
+
     users[username].fav = users[username].fav.filter((favId) => favId !== id);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
 
