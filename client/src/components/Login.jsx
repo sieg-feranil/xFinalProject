@@ -15,59 +15,64 @@ const LoginForm = ({ setIsLoggedIn }) => {
         e.preventDefault();//check
         try {
             const res = await axios.post('http://localhost:3000/login', {
-              "email": email,
-              "password": password
+                "email": email,
+                "password": password
             });
             setIsLoggedIn(true);
             setLoginStatus('succesfuly logged-in')
             sessionStorage.setItem('jwtToken', res.data.accessToken);
             sessionStorage.setItem('username', res.data.username);
             navigate('/')
-          } catch (error) {
+        } catch (error) {
             setLoginStatus(error.response.data); // Imposta il messaggio di errore
-          }
-         
-        
+        }
+
+
         // Resetta i campi del form
         // setUsername('');
         // setEmail('');
         // setPassword('');
 
-        
+
 
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div className='loginForm'>
+            <h2>Login</h2>
+            <form onSubmit={handleSubmit} >
 
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </div>
+                <div>
+                <label htmlFor="email">Email</label>
+                    <input
+                        placeholder='Insert your email...'
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
 
-            <div>
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </div>
-            {loginStatus && <span>{loginStatus  }</span>}
-            <div>
-                <span>forgot your password?</span>
-                <Link to='/passRecup'>click here</Link>
-            </div>
-            <button type="submit">Log-in</button>
-        </form>
+                <div>
+                <label htmlFor="password">Password</label>
+                    <input
+                        placeholder='Insert your password...'
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                {loginStatus && <span className='errorStatus'>{loginStatus}</span>}
+                <div>
+                    <span>Forgot your password?</span>
+                    <Link to='/passRecup'>Click here</Link>
+                </div>
+                <button type="submit">Log-in</button>
+            </form>
+        </div>
     );
 };
 

@@ -16,10 +16,10 @@ const RegistrationForm = () => {
 
         const passwordRegex = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,}$/;
         if (!passwordRegex.test(password)) {
-          setError('La password deve avere almeno 4 caratteri, una lettera maiuscola, un numero e un carattere speciale');
-          return;
+            setError('La password deve avere almeno 4 caratteri, una lettera maiuscola, un numero e un carattere speciale');
+            return;
         }
-        
+
         try {
             await axios.post('http://localhost:3000/registration', {
                 [username]: {
@@ -53,10 +53,13 @@ const RegistrationForm = () => {
     };
 
     return (
+        <div className='registerForm'>
+            <h2>Registration</h2>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Username:</label>
                 <input
+                    placeholder='Insert your username...'
                     type="text"
                     id="username"
                     value={username}
@@ -68,6 +71,7 @@ const RegistrationForm = () => {
             <div>
                 <label htmlFor="email">Email:</label>
                 <input
+                    placeholder='Insert your email...'
                     type="email"
                     id="email"
                     value={email}
@@ -79,6 +83,7 @@ const RegistrationForm = () => {
             <div>
                 <label htmlFor="password">Password:</label>
                 <input
+                    placeholder='Insert your password...'
                     type="password"
                     id="password"
                     value={password}
@@ -92,11 +97,12 @@ const RegistrationForm = () => {
                 <Link to="/login">Log in here</Link>
             </div>
 
-            <button type="submit">Registrati</button>
+            <button type="submit">Register</button>
 
             {success && <h3>La registrazione è andata a buon fine</h3>}
-            {error && <span>{error}</span>}
+            {error && <span className='errorStatus'>{error}</span>}
         </form>
+        </div>
     );
 };
 

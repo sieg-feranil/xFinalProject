@@ -11,8 +11,7 @@ function SearchBar() {
     const selectRef = useRef(null);
     const inputRef = useRef(null);
     const [isDropdownVisible, setDropdownVisible] = useState(false);
-    const [showNoResults, setShowNoResults] = useState(false); // Stato per visualizzare "No results found"
-
+    const [showNoResults, setShowNoResults] = useState(false);
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     const handleSearch = async () => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import './SearchResult.css'
 
 const MangaResults = () => {
@@ -9,6 +9,7 @@ const MangaResults = () => {
     const [page, setPage] = useState(Number(pageParam) || 1);
     const [hasNextPage, setHasNextPage] = useState(false)
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -23,6 +24,7 @@ const MangaResults = () => {
             console.log(response);
             setMangaData(data.data);
             setHasNextPage(data.pagination.has_next_page)
+            if (data.pagination.items.count == 0) navigate('/error404')
             setLoading(false);
 
         } catch (error) {
@@ -55,40 +57,44 @@ const MangaResults = () => {
 
     if (loading) {
         return (
-        <>
-        <h2>Results for "{mangaName}"</h2>
-        <div>
-            {page !== 1 && <button onClick={()=>alert('chill')}>-</button>}
-            <span> { page }</span>
-            {hasNextPage && <button onClick={()=>alert('are you in a hurry?')}>+</button>}
-          </div>
-           <div className='loaderContainer'>
-          <img className='loader' src="/moon_soul_eater.png" alt="a" />
-          <h3>loading..</h3>
-        </div>
-        </>
+            <div className='mangaDisplay'>
+                <h2>Results for "{mangaName}"</h2>
+                <div className='pageControl'>
+                    {page !== 1 && <button onClick={() => alert('chill')}>-</button>}
+                    <span> {page}</span>
+                    {hasNextPage && <button onClick={() => alert('are you in a hurry?')}>+</button>}
+                </div>
+                <div className='loaderContainer'>
+                    <img className='loader' src="/moon_soul_eater.png" alt="a" />
+                    <h3>loading..</h3>
+                </div>
+            </div>
         )
-      }
+    }
 
     return (
-        <div>
-            <h2>Results for "{mangaName}"</h2>
-            <div>
+        <div className='mangaDisplay'>
+            <h3>Results for "{mangaName}"</h3>
+            <div className='pageControl'>
                 {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
                 <span>{page}</span>
                 {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
             </div>
             <div className="manga-list">
                 {mangaData.map((manga) => (
-                    <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`} key={manga.mal_id}>
-                        <div className="manga-card">
+                    <div className="manga-card">
+                        <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`} key={manga.mal_id}>
+
                             <img src={manga.images.webp.image_url} alt={manga.title} />
-                            <h3>{manga.title}</h3>
-                        </div>
-                    </Link>
+                            <h4>{manga.title}</h4>
+                            <span>RANK:{manga.rank}</span>
+                            <span>SCORE:{manga.score}</span>
+
+                        </Link>
+                    </div>
                 ))}
             </div>
-            <div>
+            <div className='pageControl'>
                 {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
                 <span>{page}</span>
                 {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
