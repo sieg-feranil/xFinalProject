@@ -1,0 +1,30 @@
+.notFound {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.notFound span{
+    font-size: 60px;
+}
+
+.message{
+    margin-top: 40px;
+}
+
+.message span {
+    font-size: 22px;
+}
+
+.typeError{
+    margin-top: 80px;
+}
+
+.typeError >span:last-of-type{
+    color: rgb(255, 153, 0);
+}
+
+img {
+    align-self: center;
+    height: 400px;
+}

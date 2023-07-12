@@ -11,6 +11,7 @@ import UserMenu from './components/UserMenu';
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/Login';
 import MangaResults from './components/SearchResults';
+import NotFound from './components/NotFound';
 
 const App = () => {
 
@@ -56,6 +57,7 @@ const App = () => {
         <Route path='/manga/random' element={<RandomManga isLoggedIn={isLoggedIn} />} />
         <Route path="/favourites" element={<FavPage isLoggedIn={isLoggedIn} />} />
         <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
+        <Route path="/404" element={<NotFound/>}/>
       </Routes>
     </div>
   );
