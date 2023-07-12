@@ -162,11 +162,11 @@ export const addFav = async (req, res) => {
         }
       }
     }
-
-    if (!favs[id]) {
-      favs[id] = response.data.data;
-      await fs.writeFile(DB_PATH_FAVS, JSON.stringify(favs, null, '  '));
-    }
+// backup
+    // if (!favs[id]) {
+    //   favs[id] = response.data.data;
+    //   await fs.writeFile(DB_PATH_FAVS, JSON.stringify(favs, null, '  '));
+    // }
 
     res.status(200).json({
       success: true,

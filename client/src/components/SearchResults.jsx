@@ -58,11 +58,17 @@ const MangaResults = () => {
     if (loading) {
         return (
             <div className='mangaDisplay'>
-                <h2>Results for "{mangaName}"</h2>
+                <h3>Results for "{mangaName}"</h3>
                 <div className='pageControl'>
-                    {page !== 1 && <button onClick={() => alert('chill')}>-</button>}
+                    {page !== 1 ? (
+                        <button onClick={handlePrevPage}>-</button>
+                    ) : (
+                        <img id="noPrev" alt="umaru" src='/umaru.png' />
+
+                    )}
                     <span> {page}</span>
-                    {hasNextPage && <button onClick={() => alert('are you in a hurry?')}>+</button>}
+                    {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="kyo" src='/kyo.png' />)}
                 </div>
                 <div className='loaderContainer'>
                     <img className='loader' src="/moon_soul_eater.png" alt="a" />
@@ -76,9 +82,15 @@ const MangaResults = () => {
         <div className='mangaDisplay'>
             <h3>Results for "{mangaName}"</h3>
             <div className='pageControl'>
-                {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
-                <span>{page}</span>
-                {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
+                {page !== 1 ? (
+                    <button onClick={handlePrevPage}>-</button>
+                ) : (
+                    <img id="noPrev" alt="umaru" src='/umaru.png' />
+
+                )}
+                <span> {page}</span>
+                {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="kyo" src='/kyo.png' />)}
             </div>
             <div className="manga-list">
                 {mangaData.map((manga) => (
@@ -95,9 +107,15 @@ const MangaResults = () => {
                 ))}
             </div>
             <div className='pageControl'>
-                {page !== 1 && (<button onClick={handlePrevPage}>-</button>)}
-                <span>{page}</span>
-                {hasNextPage && (<button onClick={handleNextPage}>+</button>)}
+                {page !== 1 ? (
+                    <button onClick={handlePrevPage}>-</button>
+                ) : (
+                    <img id="noPrev" alt="char" src='/char.png' />
+
+                )}
+                <span> {page}</span>
+                {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="slamDunk" src='/slamDunk.png' />)}
             </div>
         </div>
     );

@@ -102,3 +102,8 @@
   border: 1px solid;
   margin-top: 10%;
 }
+
+
+#noPrev {
+  height: 50px;
+}

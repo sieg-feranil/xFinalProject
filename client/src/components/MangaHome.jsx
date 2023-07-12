@@ -86,7 +86,8 @@ const Home1 = () => {
             <img id="noPrev" alt="umaru" src='/umaru.png'/>
           )}
           <span> {page}</span>
-          {hasNextPage && <button onClick={() => alert('are you in a hurry?')}>+</button>}
+          {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="slamDunk" src='/slamDunk.png' />)}
         </div>
         <div className='loaderContainer'>
           <img className='loader' src="/moon_soul_eater.png" alt="a" />
@@ -107,7 +108,8 @@ const Home1 = () => {
 
         )}
         <span> {page}</span>
-        {hasNextPage && <button onClick={handleNextPage}>+</button>}
+        {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="kyo" src='/kyo.png' />)}
       </div>
       <div className="manga-list">
         {mangaData.data &&
@@ -129,7 +131,8 @@ const Home1 = () => {
           <img id="noPrev" alt="char" src='/char.png'/>
         )}
         <span> {page}</span>
-        {hasNextPage && <button onClick={handleNextPage}>+</button>}
+        {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    ) : (<img id="noPrev" alt="slamDunk" src='/slamDunk.png' />)}
       </div>
     </div>
   );
