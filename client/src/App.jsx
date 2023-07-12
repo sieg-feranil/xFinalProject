@@ -41,7 +41,7 @@ const App = () => {
       <header className="header">
         <HamburgerMenu />
         <div className="logo">
-          <Link to="/?page/?:page" onClick={handleLogoClick} ><span>Manga</span> <span>App</span></Link>
+          <Link to="/?page/?:page" onClick={handleLogoClick} ><span>Manga</span><span>App</span></Link>
         </div>
         <SearchBar />
         <UserMenu isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />

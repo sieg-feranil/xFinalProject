@@ -1,7 +1,7 @@
 .user-menu {
     background-color:#333;
-    width: 160px;
-    height: 15vh;
+    width: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -9,15 +9,15 @@
     top: 0;
     right: -100%;
     transition: 850ms;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.3);
   }
   
   .user-menu.active {
     right: 0;
     transition: 350ms;
   }
-  
-  
+
   
   .user-text {
     display: flex;
@@ -31,6 +31,7 @@
   
   
   .user-menu-items {
+    margin-top: 25px;
     width: 100%;
   
   }

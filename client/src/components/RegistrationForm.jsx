@@ -91,7 +91,7 @@ const RegistrationForm = () => {
                     required
                 />
             </div>
-
+            {error && <span className='errorStatus'>{error}</span>}
             <div>
                 <span>Already have an account?</span>
                 <Link to="/login">Log in here</Link>
@@ -100,7 +100,7 @@ const RegistrationForm = () => {
             <button type="submit">Register</button>
 
             {success && <h3>La registrazione è andata a buon fine</h3>}
-            {error && <span className='errorStatus'>{error}</span>}
+            
         </form>
         </div>
     );

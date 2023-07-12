@@ -60,37 +60,38 @@ const FavPage = ({ isLoggedIn }) => {
     }
   };
 
- 
+
 
   return (
-    <>
+    <div className='mangaDisplay'>
+      <h3>Favourites Manga</h3>
       {isLoggedIn ? (
         <div className="manga-list">
-          {fav.map((manga, i) => (
-            <div key={i} className="manga-card">
-              <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`}>
-                {manga.images && manga.images.webp && (
+          {fav &&
+            fav.map((manga, i) => (
+              <div key={i} className="manga-card">
+                <Link to={`/manga/${encodeURIComponent(manga.mal_id)}`}>
                   <img src={manga.images.webp.image_url} alt={manga.title} />
-                )}
-                <span>{manga.rank}</span>
-                <h4>{manga.title}</h4>
-              </Link>
-            </div>
-          ))}
+                  <h4>{manga.title}</h4>
+                  <span>RANK:{manga.rank}</span>
+                  <span>SCORE:{manga.score}</span>
+                </Link>
+              </div>
+            ))}
           {loading && (
             <div className='loaderContainer'>
-            <img className='loader' src="/moon_soul_eater.png" alt="a" />
-            <h3>loading..</h3>
-          </div>
+              <img className='loader' src="/moon_soul_eater.png" alt="a" />
+              <h3>loading..</h3>
+            </div>
           )}
         </div>
       ) : (
         <div className='PleaseLogin'>
-          <img id="YuiStops" alt="Yui" src='/stop.png'/>
+          <img id="YuiStops" alt="Yui" src='/stop.png' />
           <h2>Please <Link to={'/login'}>login</Link> / <Link to={'/registration'}>register</Link> to access this feature</h2>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

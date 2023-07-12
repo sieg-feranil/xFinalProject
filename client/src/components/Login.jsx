@@ -43,7 +43,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             <form onSubmit={handleSubmit} >
 
                 <div>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email:</label>
                     <input
                         placeholder='Insert your email...'
                         type="email"
@@ -55,7 +55,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
                 </div>
 
                 <div>
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Password:</label>
                     <input
                         placeholder='Insert your password...'
                         type="password"

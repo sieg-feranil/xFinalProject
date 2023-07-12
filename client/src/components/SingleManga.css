@@ -1,0 +1,21 @@
+.manga-info {
+    display: flex;
+}
+
+.manga-info img {
+    border-radius: 15px;
+    height: 100%;
+}
+
+.manga-info ul {
+    list-style: none;
+    font-size: large;
+}
+
+ul li button:hover  {
+    border-color: rgb(255, 153, 0);
+ }
+
+ul li button svg {
+   font-size:xx-large;
+}

@@ -539,5 +539,280 @@
         "url": "https://myanimelist.net/manga/genre/41/Seinen"
       }
     ]
+  },
+  "23751": {
+    "mal_id": 23751,
+    "url": "https://myanimelist.net/manga/23751/Monogatari_Series__Second_Season",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/2/181553.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/181553t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/181553l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/2/181553.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/181553t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/181553l.webp"
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Monogatari Series: Second Season"
+      },
+      {
+        "type": "Synonym",
+        "title": "Nekomonogatari: Shiro"
+      },
+      {
+        "type": "Synonym",
+        "title": "Kabukimonogatari"
+      },
+      {
+        "type": "Synonym",
+        "title": "Hanamonogatari"
+      },
+      {
+        "type": "Synonym",
+        "title": "Otorimonogatari"
+      },
+      {
+        "type": "Synonym",
+        "title": "Onimonogatari"
+      },
+      {
+        "type": "Synonym",
+        "title": "Koimonogatari"
+      },
+      {
+        "type": "Japanese",
+        "title": "〈物語〉シリーズ セカンドシーズン"
+      }
+    ],
+    "title": "Monogatari Series: Second Season",
+    "title_english": null,
+    "title_japanese": "〈物語〉シリーズ セカンドシーズン",
+    "title_synonyms": [
+      "Nekomonogatari: Shiro",
+      "Kabukimonogatari",
+      "Hanamonogatari",
+      "Otorimonogatari",
+      "Onimonogatari",
+      "Koimonogatari"
+    ],
+    "type": "Light Novel",
+    "chapters": 199,
+    "volumes": 6,
+    "status": "Finished",
+    "publishing": false,
+    "published": {
+      "from": "2010-10-27T00:00:00+00:00",
+      "to": "2011-12-20T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 27,
+          "month": 10,
+          "year": 2010
+        },
+        "to": {
+          "day": 20,
+          "month": 12,
+          "year": 2011
+        }
+      },
+      "string": "Oct 27, 2010 to Dec 20, 2011"
+    },
+    "score": 8.91,
+    "scored": 8.91,
+    "scored_by": 6422,
+    "rank": 19,
+    "popularity": 767,
+    "members": 21730,
+    "favorites": 703,
+    "synopsis": "This is a story. A story about choices and consequences, confessions resulting in love and rejection, and decisions leading to sacrifice and tragedy. Koyomi Araragi's decision to save a blonde vampire and meddle with the supernatural resulted in his death as a human and rebirth as a monster. But this was only one of the countless tragedies and choices that Koyomi would be faced with, and he is confronted with the fact that his seemingly unshakeable and hard-earned relationships do not last. As strange oddities continue to manifest in the world around him, he is faced with impossible choices—to sever his ties with those he loves, or eternally remain a part of the world of monsters and apparitions and watch the world crumble as a result. To accept or reject a confession, and sacrifice his all for the sake of others. However, both of these paths could lead to tragedy and farewells. This is a story. A story about Koyomi Araragi coming to realize the consequences of his choices. [Written by MAL Rewrite] This entry includes the second season of the Monogatari Series.",
+    "background": "The series was published in English by Vertical Inc: first with Nekomonogatari: Shiro as Nekomonogatari (White): Cat Tale on February 27, and Kabukimonogatari as Kabukimonogatari: Dandy Tale on May 29, 2018. Hanamonogatari, Otorimonogari, Onimonogatari, and Koimonogatari have also been licensed.",
+    "authors": [
+      {
+        "mal_id": 5254,
+        "type": "people",
+        "name": "NISIO, ISIN",
+        "url": "https://myanimelist.net/people/5254/ISIN_NISIO"
+      },
+      {
+        "mal_id": 8594,
+        "type": "people",
+        "name": "VOFAN",
+        "url": "https://myanimelist.net/people/8594/VOFAN"
+      }
+    ],
+    "serializations": [],
+    "genres": [
+      {
+        "mal_id": 4,
+        "type": "manga",
+        "name": "Comedy",
+        "url": "https://myanimelist.net/manga/genre/4/Comedy"
+      },
+      {
+        "mal_id": 8,
+        "type": "manga",
+        "name": "Drama",
+        "url": "https://myanimelist.net/manga/genre/8/Drama"
+      },
+      {
+        "mal_id": 7,
+        "type": "manga",
+        "name": "Mystery",
+        "url": "https://myanimelist.net/manga/genre/7/Mystery"
+      },
+      {
+        "mal_id": 37,
+        "type": "manga",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/manga/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 32,
+        "type": "manga",
+        "name": "Vampire",
+        "url": "https://myanimelist.net/manga/genre/32/Vampire"
+      }
+    ],
+    "demographics": []
+  },
+  "44489": {
+    "mal_id": 44489,
+    "url": "https://myanimelist.net/manga/44489/Houseki_no_Kuni",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/1/115443.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/1/115443t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/1/115443l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/1/115443.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/1/115443t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/1/115443l.webp"
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Houseki no Kuni"
+      },
+      {
+        "type": "Japanese",
+        "title": "宝石の国"
+      },
+      {
+        "type": "English",
+        "title": "Land of the Lustrous"
+      },
+      {
+        "type": "German",
+        "title": "Das Land der Juwelen"
+      },
+      {
+        "type": "Spanish",
+        "title": "La tierra de las gemas"
+      },
+      {
+        "type": "French",
+        "title": "L'Ère des Cristaux"
+      }
+    ],
+    "title": "Houseki no Kuni",
+    "title_english": "Land of the Lustrous",
+    "title_japanese": "宝石の国",
+    "title_synonyms": [],
+    "type": "Manga",
+    "chapters": null,
+    "volumes": null,
+    "status": "Publishing",
+    "publishing": true,
+    "published": {
+      "from": "2012-10-25T00:00:00+00:00",
+      "to": null,
+      "prop": {
+        "from": {
+          "day": 25,
+          "month": 10,
+          "year": 2012
+        },
+        "to": {
+          "day": null,
+          "month": null,
+          "year": null
+        }
+      },
+      "string": "Oct 25, 2012 to ?"
+    },
+    "score": 8.96,
+    "scored": 8.96,
+    "scored_by": 36447,
+    "rank": 12,
+    "popularity": 97,
+    "members": 116677,
+    "favorites": 12997,
+    "synopsis": "Long ago, Earth was struck by six meteorites, creating six moons and leaving a lone island in their wake. Those who could not make it to the island sank to the bottom of the ocean, where, over time, they slowly turned to crystal. As countless millennia passed, 28 of these crystallized lifeforms, known as the Lustrous, rose from the depths and resided on the island. Led by the wise Kongou-sensei, they must defend themselves against the seemingly infinite number of Lunarians, inhabitants of the moons who seek to harvest their valuable bodies for crafting weapons and jewelry. Houseki no Kuni centers around Phosphophyllite, a young gem about to turn three hundred years old. Clumsy, extremely fragile, and having no visible talent, they are one of the weakest gems around, unable to help in the fight against the Lunarians in any meaningful way. But as the battle with the otherworldly invaders rages on, they soon learn that power comes at a cost that no one should have to pay. [Written by MAL Rewrite]",
+    "background": "In 2015, Houseki no Kuni ranked at tenth on the Kono Manga ga Sugoi! rankings in the male readers category. The series has been published in English as Land of the Lustrous by Kodansha Comics USA since June 27, 2017.",
+    "authors": [
+      {
+        "mal_id": 16515,
+        "type": "people",
+        "name": "Ichikawa, Haruko",
+        "url": "https://myanimelist.net/people/16515/Haruko_Ichikawa"
+      }
+    ],
+    "serializations": [
+      {
+        "mal_id": 4,
+        "type": "manga",
+        "name": "Afternoon",
+        "url": "https://myanimelist.net/manga/magazine/4/Afternoon"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "manga",
+        "name": "Action",
+        "url": "https://myanimelist.net/manga/genre/1/Action"
+      },
+      {
+        "mal_id": 8,
+        "type": "manga",
+        "name": "Drama",
+        "url": "https://myanimelist.net/manga/genre/8/Drama"
+      },
+      {
+        "mal_id": 10,
+        "type": "manga",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 51,
+        "type": "manga",
+        "name": "Anthropomorphic",
+        "url": "https://myanimelist.net/manga/genre/51/Anthropomorphic"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 41,
+        "type": "manga",
+        "name": "Seinen",
+        "url": "https://myanimelist.net/manga/genre/41/Seinen"
+      }
+    ]
   }
 }

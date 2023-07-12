@@ -117,19 +117,19 @@ export const login = async (req, res) => {
       } else {
 
         console.log('Invalid password');
-        return res.status(400).send('invalid email or password ');
+        return res.status(400).send('Invalid email or password ');
 
       }
     } else {
 
       console.log('User not found');
-      return res.status(400).send('invalid password or email');
+      return res.status(400).send('Invalid password or email');
 
     }
   } catch (error) {
 
     console.error(error);
-    res.status(404).send('invalid password or email');
+    res.status(404).send('Invalid password or email');
 
   }
 };

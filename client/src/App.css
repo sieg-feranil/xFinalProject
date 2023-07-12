@@ -46,21 +46,6 @@
 } */
 
 
-
-.manga-info {
-  display: flex;
-}
-
-.manga-info img {
-  border-radius: 15px;
-  height:100%;
-}
-
-.manga-info ul {
-  list-style: none;
-  font-size: large;
-}
-
 /* loader */
 
 .loaderContainer {
@@ -80,3 +65,7 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+#Yui{
+  height:250px
+} 

@@ -46,14 +46,14 @@ function ReccomendedManga() {
   }
 
   return (
-    <div>
+    <div className='mangaDisplay'>
       <div className="manga-list">
         {reccomended.length==0 && (<h3>no reccomended manga</h3>)}
         {reccomended && reccomended.slice(currentIndex, currentIndex + 4).map((manga) => (
           <div key={manga.entry.title} className="manga-card">
             <Link to={`/manga/${encodeURIComponent(manga.entry.mal_id)}`}>
               <img src={manga.entry.images.webp.image_url} alt={manga.entry.title} />
-              <h4>{manga.entry.title}</h4>
+              <h3>{manga.entry.title}</h3>
             </Link>
           </div>
         ))}

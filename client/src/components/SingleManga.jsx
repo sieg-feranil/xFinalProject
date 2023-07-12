@@ -135,9 +135,11 @@ const SingleManga1 = ({ isLoggedIn }) => {
               <li><h3>Genres : {singleMangaData.data.genres.map((genre) => genre.name).join(', ')}</h3></li>
             )}
             {isLoggedIn && (
+              <li>
               <button onClick={isFav ? handleDeleteReq : handlePutReq}>
-                <FontAwesomeIcon icon={faHeart} style={{ color: isFav ? 'red' : 'black' }} />
+                <FontAwesomeIcon icon={faHeart} style={{ color: isFav ? 'red' : 'white' }} />
               </button>
+              </li>
             )}
           </ul>
 
