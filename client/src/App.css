@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .app {
-  margin: 80px auto 0; /* Aggiungi un margine superiore di 80px */
+  margin: 80px auto 0;
   max-width: 800px;
 }
 

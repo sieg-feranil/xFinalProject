@@ -36,6 +36,13 @@
   
   }
 
+  .log-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
   #Yui{
     height:250px
   }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import './HamburgerMenu.css'
@@ -9,6 +9,7 @@ function HamburgerMenu() {
     const [sidebar, setSidebar] = useState(false);
     const [allGenres, setAllGenres] = useState([])
     const [showGenres, setShowGenres] = useState(false);
+    const navigate = useNavigate();
   
     const URL = 'http://localhost:3000/genres'
     async function fetchData() {
@@ -45,16 +46,16 @@ function HamburgerMenu() {
   
     return (
       <>
-        <nav className="navbar">
+        <div className="navbar">
           <Link to="#" className="menu-bars" onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} />
           </Link>
-        </nav>
+        </div>
         <nav className={sidebar ? 'hamburger-menu active' : 'hamburger-menu'}>
-          <ul className="hamburger-menu-items">
-            <li>
+          <div className="hamburger-menu-items">
+         
               <button className="hamburger-text" onClick={handleGenreToggle}>
-                <span>Genres</span>
+                Genres
                 <FontAwesomeIcon icon={faAngleDown} />
               </button>
               {showGenres && (
@@ -69,10 +70,12 @@ function HamburgerMenu() {
                   ))}
                 </ul>
               )}
-            </li>
-            <li><Link to={'/favourites'}>favourites</Link></li>
-            <li><Link to={'/manga/random'}>random manga</Link></li>
-          </ul>
+    
+            <button className="hamburger-text" 
+            onClick={() => navigate('/favourites')} >Favourites</button>
+            <button className="hamburger-text"
+            onClick={() => navigate('/manga/random')} >Random Manga</button>
+          </div>
           <footer>
             <img id="Yui" alt="waifu" src="/pngegg.png" />
           </footer>

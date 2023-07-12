@@ -18,7 +18,6 @@ const RandomManga = ({ isLoggedIn }) => {
         const response = await axios.get(`https://api.jikan.moe/v4/random/manga`);
         const data = response.data;
         setRandomManga(data);
-        console.log(randomManga.data);
         setLoading(false);
       } catch (error) {
         if (error.response && error.response.status === 429) {

@@ -11,24 +11,19 @@ const DB_PATH_USERS = './db/users.json'
 const DB_PATH_FAVS = './db/favs.json'
 
 
-const MAX_RETRY_ATTEMPTS = 3; // Numero massimo di tentativi di ritentativo
-const RETRY_DELAY = 1000; // Ritardo tra i tentativi di ritentativo (in millisecondi)
+const MAX_RETRY_ATTEMPTS = 3;
+const RETRY_DELAY = 1000; 
 
 export const welcome = async (req, res) => {
-
   res.send('manga site')
-
 }
 
 
 export const getGenres = async (req, res) => {
   try {
-
     res.send(genres)
-
   }
   catch (error) {
-
     console.error(error);
     res.status(500).send('Internal Server Error');
 
@@ -52,7 +47,6 @@ export const register = async (req, res) => {
     if (existingUserByUsername) return res.status(400).send('Username already exists');
 
 
-    // Controllo se esiste già un utente con la stessa email
     const existingUserByEmail = Object.values(users).find(
       (user) => user.email == email
     );
@@ -236,8 +230,7 @@ export const getMangaRecommendations = async (req, res) => {
       try {
 
         response = await axios.get(`https://api.jikan.moe/v4/manga/${req.params.mal_id}/recommendations`);
-        break; // Esci dal loop se la richiesta ha avuto successo
-
+        break;
       } catch (error) {
 
         if (error.response && error.response.status === 429) {
