@@ -86,7 +86,7 @@ const Home1 = () => {
             <img id="noPrev" alt="umaru" src='/umaru.png'/>
           )}
           <span> {page}</span>
-          {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+          {hasNextPage ? (<button onClick={() => alert('are you in a hurry?')}>+</button>
                     ) : (<img id="noPrev" alt="slamDunk" src='/slamDunk.png' />)}
         </div>
         <div className='loaderContainer'>

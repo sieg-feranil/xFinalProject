@@ -61,13 +61,13 @@ const MangaResults = () => {
                 <h3>Results for "{mangaName}"</h3>
                 <div className='pageControl'>
                     {page !== 1 ? (
-                        <button onClick={handlePrevPage}>-</button>
+                        <button onClick={() => alert('chill')}>-</button>
                     ) : (
                         <img id="noPrev" alt="umaru" src='/umaru.png' />
 
                     )}
                     <span> {page}</span>
-                    {hasNextPage ? (<button onClick={handleNextPage}>+</button>
+                    {hasNextPage ? (<button onClick={() => alert('are you in a hurry?')}>+</button>
                     ) : (<img id="noPrev" alt="kyo" src='/kyo.png' />)}
                 </div>
                 <div className='loaderContainer'>

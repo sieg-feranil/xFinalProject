@@ -4,9 +4,6 @@
     width: auto;
 }
 
-.mangaDisplay h3 {
-    align-self: center;
-}
 
 .manga-list {
     display: grid;
@@ -24,7 +21,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.manga-card h4 {
+.manga-card h3 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
@@ -49,7 +46,7 @@
 
 
 .manga-card:hover h3 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: small;
     overflow: visible;
     white-space: wrap;
