@@ -6,6 +6,8 @@ import fs from 'fs/promises'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import 'dotenv/config'
+import {insertUser, getUser, deleteUser, run, updateUser} from './mongodb.mjs'
+
 
 const DB_PATH_USERS = './db/users.json'
 const DB_PATH_FAVS = './db/favs.json'
@@ -15,6 +17,7 @@ const MAX_RETRY_ATTEMPTS = 3;
 const RETRY_DELAY = 1000; 
 
 export const welcome = async (req, res) => {
+  run()
   res.send('manga site')
 }
 
@@ -55,18 +58,19 @@ export const register = async (req, res) => {
 
 
     const hashedPassword = await bcrypt.hash(password, 10);
-
+    let newUser = {
+      [username]: {
+        email: email,
+        password: hashedPassword,
+        fav: [],
+      }
+    }
     const updatedUsers = {
       ...users,
-      ...{
-        [username]: {
-          email: email,
-          password: hashedPassword,
-          fav: [],
-        },
-      },
+      ...newUser
     };
 
+    insertUser(newUser)
     console.log(updatedUsers);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(updatedUsers, null, '  '));
     res.send('ok').end();
@@ -87,12 +91,14 @@ export const login = async (req, res) => {
       (key) => users[key].email === req.body.email
 
     );
-
+console.log(username, '-',req.body.email);
     if (username) {
 
+      const mongoData =await getUser({ [`${username}.email`]: `${req.body.email}` })
       const isPasswordValid = await bcrypt.compare(
         req.body.password,
         users[username].password
+       
 
       );
       if (isPasswordValid) {
@@ -137,37 +143,14 @@ export const addFav = async (req, res) => {
 
       users[username].fav.push(id);
       await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
-
+      const email= users[username].email
+      const filter = {
+        [`${username}.email`]: email
+      };
+      const update = { $push: { [`${username}.fav`]: { $each: [`${id}`] } } };
+      
+      await updateUser(filter, update);
     }
-
-    let retryAttempts = 0;
-    let response;
-
-    while (retryAttempts < MAX_RETRY_ATTEMPTS) {
-
-      try {
-
-        response = await axios.get(`https://api.jikan.moe/v4/manga/${id}`);
-        break;
-
-      } catch (error) {
-        if (error.response && error.response.status === 429) {
-
-          console.log(`Rate limit exceeded. Retrying in ${RETRY_DELAY}ms...`);
-          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-
-          retryAttempts++;
-        } else {
-          throw error;
-        }
-      }
-    }
-// backup
-    // if (!favs[id]) {
-    //   favs[id] = response.data.data;
-    //   await fs.writeFile(DB_PATH_FAVS, JSON.stringify(favs, null, '  '));
-    // }
-
     res.status(200).json({
       success: true,
       message: 'Favorite added successfully',
@@ -188,8 +171,11 @@ export const addFav = async (req, res) => {
 
 export const getFav = async (req, res) => {
   try {
-
     const { username } = req.headers;
+    const email = users[username].email
+    const mongoData =await getUser({ [`${username}.email`]: `${email}` })
+    const favs = mongoData[username].favs
+    console.log(mongoData[username]);
     res.send(users[username].fav);
 
   } catch (error) {
@@ -206,6 +192,12 @@ export const deleteFav = async (req, res) => {
 
     users[username].fav = users[username].fav.filter((favId) => favId !== id);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+
+    const email = users[username].email;
+    const filter = { [`${username}.email`]: email };
+    const update = { $pop: { [`${username}.fav`]: 1 } };
+
+    await updateUser(filter, update);
 
     console.log(users[username].fav);
     res.send(users[username].fav);

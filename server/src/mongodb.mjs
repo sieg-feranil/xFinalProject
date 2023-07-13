@@ -45,7 +45,7 @@ export async function getUser(user) {
     const database = client.db(process.env.MONGODB_DBNAME);  
     const usersCollection = database.collection("users");  
 
-    let foundUsers = await usersCollection.find(user).toArray()
+    let foundUsers = await usersCollection.findOne(user)
     console.log(foundUsers);
     // for await (const doc of cursor) {
     //   console.dir(doc);

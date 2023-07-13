@@ -45,5 +45,18 @@
     "email": "dasoppdopsa@gmail.com",
     "password": "$2b$10$v7dld1e6FrZgjWkYPykx3.UvMp6hSxooVn9yuGy/DfXuBCpNKF3SS",
     "fav": []
+  },
+  "mrBeast": {
+    "email": "mrBeast@beast.com",
+    "password": "$2b$10$OTzwoi3Qm8yN9iBdM0yNruimOfF1MxR9hUxOaterXaIo3XXlwyLry",
+    "fav": [
+      "2",
+      "642"
+    ]
+  },
+  "omqw": {
+    "email": "a1@a1.a1",
+    "password": "$2b$10$tL58j2qfA6.i16FQgzbB7erUb8CTuIc1IL4J/IBNguY/k271.0Qhi",
+    "fav": []
   }
 }
