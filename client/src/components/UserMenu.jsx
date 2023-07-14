@@ -36,10 +36,14 @@ function UserMenu({ isLoggedIn, setIsLoggedIn }) {
               <Link to="/login">Login</Link>
             </li>
           </ul>
-        ) : (<div  className='log-out'>
+        ) : (<ul  className='user-menu-items'>
+          <li>
           <Link onClick={handleLogout}>logout</Link>
+          </li>
+          <li>
           <Link to={'/deleteAccount'}>delete account</Link>
-        </div>
+          </li>
+        </ul>
         )}
 
       </nav>

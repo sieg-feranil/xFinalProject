@@ -37,9 +37,13 @@
 }
 
 
+
 /* easter egg */
-/* a:hover span:nth-child(2) {
-  padding: 4px;
+/* span:nth-child(2) {
+  padding: 1px;
+}
+a:hover span:nth-child(2) {
+  padding: 1px;
   background-color: #ff9800;
   border-radius: 8px;
   color: black;
