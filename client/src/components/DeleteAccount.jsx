@@ -41,7 +41,7 @@ const DeleteAccount = ({ setIsLoggedIn }) => {
         <div className="deleteContainer">
           <h3>You've successfully deleted your account</h3>
           <span>Your favorites manga list has been deleted</span>
-          <img className="deleteImg" src="/saitama.png" alt="a" />
+          <img className="deleteImg" src="/saitama.png" alt="ok" />
         </div>
       ) : (
         <div className="deleteContainer">
@@ -52,7 +52,7 @@ const DeleteAccount = ({ setIsLoggedIn }) => {
           <button onClick={handleClick}>
             {clicked? 'Yeah i want to delete my account':'Delete Account'}
           </button>
-          {clicked && <img className="deleteImg" src="/eww.png" alt="a" />}
+          {clicked && <img className="deleteImg" src="/eww.png" alt="eww" />}
         </div>
       )}
     </div>

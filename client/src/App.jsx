@@ -13,6 +13,7 @@ import LoginForm from './components/Login';
 import MangaResults from './components/SearchResults';
 import NotFound from './components/NotFound';
 import DeleteAccount from './components/DeleteAccount';
+import PassRecup from './components/PassRecup';
 
 const App = () => {
 
@@ -60,6 +61,7 @@ const App = () => {
         <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
         <Route path="/error404" element={<NotFound/>}/>
         <Route path="/deleteAccount" element={<DeleteAccount setIsLoggedIn={setIsLoggedIn}/>}/>
+        <Route path="/passRecup" element={<PassRecup/>}/>
       </Routes>
     </div>
   );
