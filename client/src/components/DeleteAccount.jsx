@@ -22,6 +22,9 @@ const DeleteAccount = ({ setIsLoggedIn }) => {
       sessionStorage.removeItem('username');
       setIsLoggedIn(false);
       setDeleted(true);
+      setTimeout(() => {
+        window.location.href = '/login';
+    }, 3000);
     } catch (error) {
       console.error(error);
     }
@@ -40,8 +43,8 @@ const DeleteAccount = ({ setIsLoggedIn }) => {
       {deleted ? (
         <div className="deleteContainer">
           <h3>You've successfully deleted your account</h3>
-          <span>Your favorites manga list has been deleted</span>
           <img className="deleteImg" src="/saitama.png" alt="ok" />
+          <span>Your favorites manga list has been deleted</span>
         </div>
       ) : (
         <div className="deleteContainer">

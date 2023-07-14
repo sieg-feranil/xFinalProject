@@ -36,7 +36,7 @@ const RegistrationForm = () => {
 
             setTimeout(() => {
                 window.location.href = '/login';
-            }, 2000);
+            }, 1000);
 
 
         } catch (error) {
