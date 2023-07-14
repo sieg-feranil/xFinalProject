@@ -32,7 +32,7 @@ const RegistrationForm = () => {
             setPassword('');
             setError('');
             setSuccess(true);
-
+            
 
             setTimeout(() => {
                 window.location.href = '/login';
@@ -99,7 +99,7 @@ const RegistrationForm = () => {
 
             <button type="submit">Register</button>
 
-            {success && <h3>La registrazione è andata a buon fine</h3>}
+            {success && <h3>Registration sucessful</h3>}
             
         </form>
         </div>

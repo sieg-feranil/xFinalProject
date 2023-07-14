@@ -50,13 +50,12 @@
     "email": "mrBeast@beast.com",
     "password": "$2b$10$OTzwoi3Qm8yN9iBdM0yNruimOfF1MxR9hUxOaterXaIo3XXlwyLry",
     "fav": [
-      "2",
-      "642"
+      "2"
     ]
   },
-  "omqw": {
-    "email": "a1@a1.a1",
-    "password": "$2b$10$tL58j2qfA6.i16FQgzbB7erUb8CTuIc1IL4J/IBNguY/k271.0Qhi",
+  "e": {
+    "email": "e@e.e",
+    "password": "$2b$10$vb1WJ9HKo9Lc4kXZxw9zPOFAYPI5B9aUlwZ7RshjNvCnFvwfIilGe",
     "fav": []
   }
 }

@@ -6,7 +6,7 @@ import fs from 'fs/promises'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import 'dotenv/config'
-import {insertUser, getUser, deleteUser, run, updateUser} from './mongodb.mjs'
+import {insertUser, getUser, deleteUserMongo, run, updateUser} from './mongodb.mjs'
 
 
 const DB_PATH_USERS = './db/users.json'
@@ -241,5 +241,33 @@ export const getMangaRecommendations = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
+  }
+};
+
+export const deleteUser = async (req, res) => {
+  try {
+    
+    const { username } = req.headers;
+
+    if (!users[username]) {
+      return res.status(404).send('User not found');
+    }
+ const email = users[username].email;
+    const filter = { [`${username}.email`]: email };
+    delete users[username];
+    await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+
+    await deleteUserMongo(filter);
+
+    res.status(200).json({
+      success: true,
+      message: 'User deleted successfully',
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'An error occurred',
+    });
   }
 };

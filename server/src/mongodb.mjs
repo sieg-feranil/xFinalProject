@@ -59,7 +59,7 @@ export async function getUser(user) {
 }
 
 
-export async function deleteUser(user) {
+export async function deleteUserMongo(user) {
   try{
     await client.connect()
     const database = client.db(process.env.MONGODB_DBNAME);  

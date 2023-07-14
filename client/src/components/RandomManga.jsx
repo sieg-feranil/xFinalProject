@@ -88,13 +88,13 @@ const RandomManga = ({ isLoggedIn }) => {
               )}
               {randomManga.data.genres && (
                 <li><h3>Genres : {randomManga.data.genres.map((genre) => genre.name).join(', ')}</h3></li>
-              )}
+              )}<li className='buttonsLi'>
               {isLoggedIn && (
-                <li>
+                
                   <button onClick={handlePutReq}><FontAwesomeIcon icon={faHeart} /></button>
-                </li>
+                
               )}
-              <li>
+              
                 <button onClick={() => setRefresh(!refresh)}>refresh</button>
               </li>
             </ul>

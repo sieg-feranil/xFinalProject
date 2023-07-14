@@ -3,7 +3,6 @@ import cors from "cors"
 import jwt from 'jsonwebtoken'
 import * as manga from './mangaRoutes.mjs'
 import 'dotenv/config'
-import {insertUser, getUser, deleteUser} from './mongodb.mjs'
 const app = express()
 const port = 3000
 
@@ -24,6 +23,7 @@ app.get('/genres', manga.getGenres)
 app.put('/favourites', authenticateToken, manga.addFav)
 app.get('/favourites', authenticateToken, manga.getFav)
 app.delete('/favourites', authenticateToken, manga.deleteFav)
+app.delete('/delete', authenticateToken, manga.deleteUser)
 
 
 

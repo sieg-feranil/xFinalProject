@@ -12,6 +12,7 @@ import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/Login';
 import MangaResults from './components/SearchResults';
 import NotFound from './components/NotFound';
+import DeleteAccount from './components/DeleteAccount';
 
 const App = () => {
 
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/favourites" element={<FavPage isLoggedIn={isLoggedIn} />} />
         <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
         <Route path="/error404" element={<NotFound/>}/>
+        <Route path="/deleteAccount" element={<DeleteAccount setIsLoggedIn={setIsLoggedIn}/>}/>
       </Routes>
     </div>
   );
