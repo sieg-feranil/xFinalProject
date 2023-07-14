@@ -16,6 +16,8 @@ import DeleteAccount from './components/DeleteAccount';
 import PassRecup from './components/PassRecup';
 
 const App = () => {
+   const storedToken = sessionStorage.getItem('jwtToken');
+    const timer = sessionStorage.getItem('timer');
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -30,11 +32,17 @@ const App = () => {
   console.log(isLoggedIn);
 
   useEffect(() => {
-    const storedToken = sessionStorage.getItem('jwtToken');
     if (storedToken) {
       setIsLoggedIn(true);
+      setTimeout(() => {
+        setIsLoggedIn(false)
+        sessionStorage.removeItem('jwtToken');
+        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('timer');
+        console.log(`time's up you've been logged out`);
+      }, timer)
     }
-  }, []);
+  }, [timer]);
 
 
   return (
@@ -58,10 +66,10 @@ const App = () => {
         <Route path="/manga/:mal_id" element={<SingleManga1 isLoggedIn={isLoggedIn} />} />
         <Route path='/manga/random' element={<RandomManga isLoggedIn={isLoggedIn} />} />
         <Route path="/favourites" element={<FavPage isLoggedIn={isLoggedIn} />} />
-        <Route path="/results/:mangaName/page/:page" element={<MangaResults/>} />
-        <Route path="/error404" element={<NotFound/>}/>
-        <Route path="/deleteAccount" element={<DeleteAccount setIsLoggedIn={setIsLoggedIn}/>}/>
-        <Route path="/passRecup" element={<PassRecup/>}/>
+        <Route path="/results/:mangaName/page/:page" element={<MangaResults />} />
+        <Route path="/error404" element={<NotFound />} />
+        <Route path="/deleteAccount" element={<DeleteAccount setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/passRecup" element={<PassRecup />} />
       </Routes>
     </div>
   );

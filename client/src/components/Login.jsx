@@ -9,6 +9,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginStatus, setLoginStatus] = useState('')
+
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -19,9 +20,9 @@ const LoginForm = ({ setIsLoggedIn }) => {
                 "password": password
             });
             setIsLoggedIn(true);
-            setLoginStatus('succesfuly logged-in')
             sessionStorage.setItem('jwtToken', res.data.accessToken);
             sessionStorage.setItem('username', res.data.username);
+            sessionStorage.setItem('timer', res.data.timer);
             navigate('/')
         } catch (error) {
             setLoginStatus(error.response.data); // Imposta il messaggio di errore
@@ -72,6 +73,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
                 </div>
                 <button type="submit">Log-in</button>
             </form>
+            
         </div>
     );
 };

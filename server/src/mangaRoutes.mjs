@@ -87,8 +87,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const modulePath = './index.js';
-    const { default: indexModule } = await import(modulePath);
+    const expiringTime = '6000'
     const username = Object.keys(users).find(
       (key) => users[key].email === req.body.email
 
@@ -108,11 +107,12 @@ console.log(username, '-',req.body.email);
         const accessToken = jwt.sign(
           users[username],
           process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: '1h' }
+          { expiresIn: `${expiringTime}` }
         );
         res.json({
           accessToken: accessToken,
           username: username,
+          timer: expiringTime
         });
         // console.log(accessToken);
         return res.status(200);

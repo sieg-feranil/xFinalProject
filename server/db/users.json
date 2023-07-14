@@ -50,5 +50,10 @@
     "email": "e@e.e",
     "password": "$2b$10$vb1WJ9HKo9Lc4kXZxw9zPOFAYPI5B9aUlwZ7RshjNvCnFvwfIilGe",
     "fav": []
+  },
+  "mrBeast": {
+    "email": "mrBeast@beast.com",
+    "password": "$2b$10$DCl1dj5hyM8n.r0n23Vq2eAlliM3NCOGC0nEA.AQB/XyIFefRDQ.i",
+    "fav": []
   }
 }
