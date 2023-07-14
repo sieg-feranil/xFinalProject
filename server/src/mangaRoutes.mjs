@@ -87,7 +87,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const expiringTime = '6000'
+    const expiringTime = '36000'
     const username = Object.keys(users).find(
       (key) => users[key].email === req.body.email
 
