@@ -69,8 +69,9 @@ export const register = async (req, res) => {
       ...users,
       ...newUser
     };
+    console.log(newUser);
 
-    insertUser(newUser)
+    await insertUser(newUser)
     console.log(updatedUsers);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(updatedUsers, null, '  '));
     res.send('ok').end();
@@ -86,7 +87,8 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-
+    const modulePath = './index.js';
+    const { default: indexModule } = await import(modulePath);
     const username = Object.keys(users).find(
       (key) => users[key].email === req.body.email
 
@@ -141,15 +143,17 @@ export const addFav = async (req, res) => {
     console.log(req.body);
     if (!users[username].fav.includes(id)) {
 
-      users[username].fav.push(id);
-      await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
-      const email= users[username].email
+ const email= users[username].email
       const filter = {
         [`${username}.email`]: email
       };
       const update = { $push: { [`${username}.fav`]: { $each: [`${id}`] } } };
       
       await updateUser(filter, update);
+
+      users[username].fav.push(id);
+      await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+     
     }
     res.status(200).json({
       success: true,
@@ -174,6 +178,7 @@ export const getFav = async (req, res) => {
     const { username } = req.headers;
     const email = users[username].email
     const mongoData =await getUser({ [`${username}.email`]: `${email}` })
+    console.log(mongoData);
     const favs = mongoData[username].favs
     console.log(mongoData[username]);
     res.send(users[username].fav);
@@ -189,15 +194,17 @@ export const deleteFav = async (req, res) => {
   try {
     const { id, username } = req.headers;
     if (!users[username]) return res.status(404).send('User not found');
-
-    users[username].fav = users[username].fav.filter((favId) => favId !== id);
-    await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
-
-    const email = users[username].email;
+    
+const email = users[username].email;
     const filter = { [`${username}.email`]: email };
     const update = { $pop: { [`${username}.fav`]: 1 } };
 
     await updateUser(filter, update);
+
+    users[username].fav = users[username].fav.filter((favId) => favId !== id);
+    await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
+
+    
 
     console.log(users[username].fav);
     res.send(users[username].fav);
@@ -255,9 +262,11 @@ export const deleteUser = async (req, res) => {
  const email = users[username].email;
     const filter = { [`${username}.email`]: email };
     delete users[username];
+
+     await deleteUserMongo(filter);
     await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, '  '));
 
-    await deleteUserMongo(filter);
+   
 
     res.status(200).json({
       success: true,
